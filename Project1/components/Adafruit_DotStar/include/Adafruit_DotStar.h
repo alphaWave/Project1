@@ -22,7 +22,7 @@
 #define _ADAFRUIT_DOT_STAR_H_
 
 // #if (ARDUINO >= 100)
-#include <Arduino.h>
+// #include <Arduino.h>
 // #include "../../arduino/cores/esp32/Arduino.h"
 // #else
 // #include <WProgram.h>
@@ -39,18 +39,25 @@
 #define DOTSTAR_BGR (2 | (1 << 2) | (0 << 4)) ///< Transmit as B,G,R
 #define DOTSTAR_MONO 0 ///< Single-color strip WIP DO NOT USE, use RGB for now
 
+// Added from Arduino.h to make this library work inside ESP-IDF:
+#include <stdint.h>
+#define pgm_read_byte(addr)   (*(const unsigned char *)(addr))
+// typedef uint8_t byte;
+
+
+
 // These two tables are declared outside the Adafruit_DotStar class
 // because some boards may require oldschool compilers that don't
 // handle the C++11 constexpr keyword.
 
-/* A PROGMEM (flash mem) table containing 8-bit unsigned sine wave (0-255).
+/* A const (flash mem) table containing 8-bit unsigned sine wave (0-255).
    Copy & paste this snippet into a Python REPL to regenerate:
 import math
 for x in range(256):
     print("{:3},".format(int((math.sin(x/128.0*math.pi)+1.0)*127.5+0.5))),
     if x&15 == 15: print
 */
-static const uint8_t PROGMEM _DotStarSineTable[256] = {
+static const uint8_t _DotStarSineTable[256] = {
     128, 131, 134, 137, 140, 143, 146, 149, 152, 155, 158, 162, 165, 167, 170,
     173, 176, 179, 182, 185, 188, 190, 193, 196, 198, 201, 203, 206, 208, 211,
     213, 215, 218, 220, 222, 224, 226, 228, 230, 232, 234, 235, 237, 238, 240,
@@ -78,7 +85,7 @@ for x in range(256):
     print("{:3},".format(int(math.pow((x)/255.0,gamma)*255.0+0.5))),
     if x&15 == 15: print
 */
-static const uint8_t PROGMEM _DotStarGammaTable[256] = {
+static const uint8_t _DotStarGammaTable[256] = {
     0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
     0,   0,   0,   0,   0,   0,   0,   0,   0,   1,   1,   1,   1,   1,   1,
     1,   1,   1,   1,   1,   1,   2,   2,   2,   2,   2,   2,   2,   2,   3,
@@ -189,7 +196,7 @@ public:
 
   void rainbow(uint16_t first_hue = 0, int8_t reps = 1,
                uint8_t saturation = 255, uint8_t brightness = 255,
-               boolean gammify = true);
+               bool gammify = true);
 
 private:
   uint16_t numLEDs;   ///< Number of pixels

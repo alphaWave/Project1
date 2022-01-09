@@ -8,7 +8,7 @@
 #include "driver/gpio.h"
 #include "sdkconfig.h"
 #include "../components/Adafruit_DotStar/include/Adafruit_DotStar.h"
-#include "../components/LEDStrip/include/LEDStrip.h"
+// #include "../components/LEDStrip/include/LEDStrip.h"
 
 // DATAPIN and CLOCKPIN can usually be any two pins
 enum
@@ -48,6 +48,7 @@ extern "C" void app_main(void)
 	int tail = -10; // Index of first 'on' and 'off' pixels
 	int brightness = 10;
 	uint32_t color = 0xFF0000; // 'On' color (starts red)
+	const TickType_t delay = 20 / portTICK_PERIOD_MS;
 
 	while (1)
 	{
@@ -56,7 +57,7 @@ extern "C" void app_main(void)
 		myStrip.setBrightness(brightness); // adjust brightness between 0 and 255
 		myStrip.setPixelColor(tail, 0);	   // 'Off' pixel at tail
 		myStrip.show();					   // Refresh strip
-		delay(20);						   // Pause 20 milliseconds (~50 FPS)
+		vTaskDelay(delay);
 
 		if (++head >= NUMPIXELS)
 		{							// Increment head index.  Off end of strip?

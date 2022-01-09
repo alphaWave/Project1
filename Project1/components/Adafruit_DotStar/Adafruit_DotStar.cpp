@@ -40,9 +40,9 @@
  */
 
 #include "Adafruit_DotStar.h"
-#if !defined(__AVR_ATtiny85__)
-#include <SPI.h>
-#endif
+// #if !defined(__AVR_ATtiny85__)
+// #include <SPI.h>
+// #endif
 
 #define USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPI
 

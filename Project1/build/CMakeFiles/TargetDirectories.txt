@@ -633,13 +633,6 @@
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/rebuild_cache.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/edit_cache.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/__idf_Adafruit_DotStar.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDStrip/CMakeFiles/install/local.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDStrip/CMakeFiles/install/strip.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDStrip/CMakeFiles/install.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDStrip/CMakeFiles/list_install_components.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDStrip/CMakeFiles/__idf_LEDStrip.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDStrip/CMakeFiles/rebuild_cache.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDStrip/CMakeFiles/edit_cache.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/main/CMakeFiles/install/local.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

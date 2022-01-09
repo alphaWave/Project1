@@ -505,27 +505,27 @@
 	[
 		{
 			"backtrace" : 5,
-			"id" : "__idf_protocomm::@d76d01c8dec06205e1fc"
+			"id" : "__idf_console::@4311ed8d271cc0ee1422"
 		},
 		{
 			"backtrace" : 5,
 			"id" : "__idf_protobuf-c::@b14513c4bd859268ec22"
 		},
 		{
+			"backtrace" : 5,
+			"id" : "__idf_protocomm::@d76d01c8dec06205e1fc"
+		},
+		{
 			"backtrace" : 7,
 			"id" : "__idf_mdns::@2f076c6da9dadb273cdc"
 		},
 		{
-			"backtrace" : 2,
-			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
-		},
-		{
-			"backtrace" : 5,
-			"id" : "__idf_console::@4311ed8d271cc0ee1422"
-		},
-		{
 			"backtrace" : 8,
 			"id" : "__idf_json::@c78a8bdc820334f01148"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
 		}
 	],
 	"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098",

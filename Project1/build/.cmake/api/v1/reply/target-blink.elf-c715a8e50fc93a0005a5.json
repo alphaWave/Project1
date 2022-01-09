@@ -537,10 +537,6 @@
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/LEDStrip/include"
-				},
-				{
-					"backtrace" : 3,
 					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/main"
 				}
 			],
@@ -553,6 +549,82 @@
 	],
 	"dependencies" : 
 	[
+		{
+			"backtrace" : 3,
+			"id" : "__idf_coap::@9ea4196552bc90428972"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_console::@4311ed8d271cc0ee1422"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_esp_adc_cal::@dc736dc1d836ef36c9a5"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_esp_hid::@15df40e16a5d8775dd9b"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_protobuf-c::@b14513c4bd859268ec22"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_protocomm::@d76d01c8dec06205e1fc"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_mdns::@2f076c6da9dadb273cdc"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_esp_local_ctrl::@d6aad58d2946e56208ef"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_freemodbus::@de63ca74a1babc26b29c"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_libsodium::@66e4f5d448f23c9449a2"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_json::@c78a8bdc820334f01148"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_openssl::@e614527ea5fe5ca5f395"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_spiffs::@df881b71474064c86689"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_mqtt::@c1ab2c6a99226d1f4b56"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_main::@7368607ed66887415643"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "_project_elf_src::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
+		},
 		{
 			"backtrace" : 3,
 			"id" : "__idf_esp_websocket_client::@2aa04d350e0c9afab7cd"
@@ -571,27 +643,7 @@
 		},
 		{
 			"backtrace" : 3,
-			"id" : "__idf_protocomm::@d76d01c8dec06205e1fc"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_protobuf-c::@b14513c4bd859268ec22"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_mdns::@2f076c6da9dadb273cdc"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_esp_local_ctrl::@d6aad58d2946e56208ef"
-		},
-		{
-			"backtrace" : 4,
-			"id" : "_project_elf_src::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
+			"id" : "__idf_jsmn::@88dec008f06e3af609d0"
 		},
 		{
 			"backtrace" : 8,
@@ -612,66 +664,6 @@
 		{
 			"backtrace" : 3,
 			"id" : "__idf_cmock::@38f9eb59693b7394f54c"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_coap::@9ea4196552bc90428972"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_console::@4311ed8d271cc0ee1422"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_esp_adc_cal::@dc736dc1d836ef36c9a5"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_esp_hid::@15df40e16a5d8775dd9b"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_freemodbus::@de63ca74a1babc26b29c"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_jsmn::@88dec008f06e3af609d0"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_json::@c78a8bdc820334f01148"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_libsodium::@66e4f5d448f23c9449a2"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_mqtt::@c1ab2c6a99226d1f4b56"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_openssl::@e614527ea5fe5ca5f395"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_spiffs::@df881b71474064c86689"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_LEDStrip::@a0bf35d8fd6d7176f015"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_main::@7368607ed66887415643"
 		}
 	],
 	"id" : "blink.elf::@6890427a1f51a3e7e1df",
@@ -1044,11 +1036,6 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "esp-idf/LEDStrip/libLEDStrip.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
 				"fragment" : "esp-idf/main/libmain.a",
 				"role" : "libraries"
 			},
@@ -1187,11 +1174,6 @@
 			{
 				"backtrace" : 3,
 				"fragment" : "esp-idf/Adafruit_DotStar/libAdafruit_DotStar.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "esp-idf/LEDStrip/libLEDStrip.a",
 				"role" : "libraries"
 			},
 			{

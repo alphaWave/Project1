@@ -19,22 +19,22 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						74,
-						76,
+						73,
+						75,
+						77,
 						78,
-						79,
-						81,
-						88,
-						90,
+						80,
+						87,
+						89,
+						91,
 						92,
-						93,
+						97,
 						98,
-						99,
+						103,
 						104,
 						105,
 						106,
-						107,
-						108
+						107
 					]
 				},
 				{
@@ -119,8 +119,7 @@
 						85,
 						86,
 						87,
-						88,
-						89
+						88
 					],
 					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
@@ -142,7 +141,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_pm",
 					"targetIndexes" : 
 					[
-						28
+						27
 					]
 				},
 				{
@@ -161,8 +160,8 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/mbedtls",
 					"targetIndexes" : 
 					[
-						49,
-						82
+						48,
+						81
 					]
 				},
 				{
@@ -182,7 +181,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/mbedtls/mbedtls",
 					"targetIndexes" : 
 					[
-						75
+						74
 					]
 				},
 				{
@@ -197,10 +196,10 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/mbedtls/mbedtls/library",
 					"targetIndexes" : 
 					[
+						93,
 						94,
 						95,
-						96,
-						97
+						96
 					]
 				},
 				{
@@ -225,11 +224,11 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/efuse",
 					"targetIndexes" : 
 					[
-						12,
+						11,
+						82,
 						83,
 						84,
-						85,
-						103
+						102
 					]
 				},
 				{
@@ -243,10 +242,10 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/partition_table",
 					"targetIndexes" : 
 					[
-						89,
+						88,
+						99,
 						100,
-						101,
-						102
+						101
 					]
 				},
 				{
@@ -260,7 +259,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/app_update",
 					"targetIndexes" : 
 					[
-						3
+						2
 					]
 				},
 				{
@@ -274,7 +273,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/bootloader_support",
 					"targetIndexes" : 
 					[
-						5
+						4
 					]
 				},
 				{
@@ -288,7 +287,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_ipc",
 					"targetIndexes" : 
 					[
-						25
+						24
 					]
 				},
 				{
@@ -302,7 +301,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/spi_flash",
 					"targetIndexes" : 
 					[
-						62
+						61
 					]
 				},
 				{
@@ -316,7 +315,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/nvs_flash",
 					"targetIndexes" : 
 					[
-						54
+						53
 					]
 				},
 				{
@@ -330,7 +329,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/pthread",
 					"targetIndexes" : 
 					[
-						59
+						58
 					]
 				},
 				{
@@ -344,7 +343,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_gdbstub",
 					"targetIndexes" : 
 					[
-						19
+						18
 					]
 				},
 				{
@@ -362,7 +361,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_system",
 					"targetIndexes" : 
 					[
-						32
+						31
 					]
 				},
 				{
@@ -400,7 +399,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_rom",
 					"targetIndexes" : 
 					[
-						30
+						29
 					]
 				},
 				{
@@ -414,7 +413,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/hal",
 					"targetIndexes" : 
 					[
-						41
+						40
 					]
 				},
 				{
@@ -428,7 +427,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/vfs",
 					"targetIndexes" : 
 					[
-						68
+						67
 					]
 				},
 				{
@@ -442,7 +441,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_eth",
 					"targetIndexes" : 
 					[
-						17
+						16
 					]
 				},
 				{
@@ -456,7 +455,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/tcpip_adapter",
 					"targetIndexes" : 
 					[
-						65
+						64
 					]
 				},
 				{
@@ -470,7 +469,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_netif",
 					"targetIndexes" : 
 					[
-						27
+						26
 					]
 				},
 				{
@@ -484,7 +483,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_event",
 					"targetIndexes" : 
 					[
-						18
+						17
 					]
 				},
 				{
@@ -498,7 +497,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/wpa_supplicant",
 					"targetIndexes" : 
 					[
-						71
+						70
 					]
 				},
 				{
@@ -512,7 +511,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_wifi",
 					"targetIndexes" : 
 					[
-						35
+						34
 					]
 				},
 				{
@@ -526,7 +525,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/lwip",
 					"targetIndexes" : 
 					[
-						47
+						46
 					]
 				},
 				{
@@ -540,7 +539,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/log",
 					"targetIndexes" : 
 					[
-						46
+						45
 					]
 				},
 				{
@@ -554,7 +553,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/heap",
 					"targetIndexes" : 
 					[
-						42
+						41
 					]
 				},
 				{
@@ -572,7 +571,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/soc",
 					"targetIndexes" : 
 					[
-						61
+						60
 					]
 				},
 				{
@@ -600,7 +599,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_hw_support",
 					"targetIndexes" : 
 					[
-						24
+						23
 					]
 				},
 				{
@@ -624,7 +623,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_ringbuf",
 					"targetIndexes" : 
 					[
-						29
+						28
 					]
 				},
 				{
@@ -638,7 +637,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/driver",
 					"targetIndexes" : 
 					[
-						11
+						10
 					]
 				},
 				{
@@ -652,7 +651,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/xtensa",
 					"targetIndexes" : 
 					[
-						72
+						71
 					]
 				},
 				{
@@ -666,7 +665,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/espcoredump",
 					"targetIndexes" : 
 					[
-						36
+						35
 					]
 				},
 				{
@@ -680,7 +679,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/perfmon",
 					"targetIndexes" : 
 					[
-						56
+						55
 					]
 				},
 				{
@@ -694,9 +693,9 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp32",
 					"targetIndexes" : 
 					[
-						14,
-						73,
-						91
+						13,
+						72,
+						90
 					]
 				},
 				{
@@ -710,7 +709,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_common",
 					"targetIndexes" : 
 					[
-						16
+						15
 					]
 				},
 				{
@@ -724,7 +723,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_timer",
 					"targetIndexes" : 
 					[
-						33
+						32
 					]
 				},
 				{
@@ -738,7 +737,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/freertos",
 					"targetIndexes" : 
 					[
-						40
+						39
 					]
 				},
 				{
@@ -756,7 +755,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/newlib",
 					"targetIndexes" : 
 					[
-						52
+						51
 					]
 				},
 				{
@@ -780,7 +779,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/cxx",
 					"targetIndexes" : 
 					[
-						10
+						9
 					]
 				},
 				{
@@ -794,7 +793,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/app_trace",
 					"targetIndexes" : 
 					[
-						2
+						1
 					]
 				},
 				{
@@ -808,7 +807,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/asio",
 					"targetIndexes" : 
 					[
-						4
+						3
 					]
 				},
 				{
@@ -822,8 +821,8 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/bootloader",
 					"targetIndexes" : 
 					[
-						80,
-						87
+						79,
+						86
 					]
 				},
 				{
@@ -847,7 +846,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/cbor",
 					"targetIndexes" : 
 					[
-						6
+						5
 					]
 				},
 				{
@@ -861,7 +860,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/unity",
 					"targetIndexes" : 
 					[
-						67
+						66
 					]
 				},
 				{
@@ -875,7 +874,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/cmock",
 					"targetIndexes" : 
 					[
-						7
+						6
 					]
 				},
 				{
@@ -889,7 +888,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/coap",
 					"targetIndexes" : 
 					[
-						8
+						7
 					]
 				},
 				{
@@ -903,7 +902,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/console",
 					"targetIndexes" : 
 					[
-						9
+						8
 					]
 				},
 				{
@@ -917,7 +916,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/nghttp",
 					"targetIndexes" : 
 					[
-						53
+						52
 					]
 				},
 				{
@@ -931,7 +930,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp-tls",
 					"targetIndexes" : 
 					[
-						13
+						12
 					]
 				},
 				{
@@ -945,7 +944,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_adc_cal",
 					"targetIndexes" : 
 					[
-						15
+						14
 					]
 				},
 				{
@@ -959,7 +958,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_hid",
 					"targetIndexes" : 
 					[
-						20
+						19
 					]
 				},
 				{
@@ -973,7 +972,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/tcp_transport",
 					"targetIndexes" : 
 					[
-						64
+						63
 					]
 				},
 				{
@@ -987,7 +986,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_http_client",
 					"targetIndexes" : 
 					[
-						21
+						20
 					]
 				},
 				{
@@ -1001,7 +1000,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_http_server",
 					"targetIndexes" : 
 					[
-						22
+						21
 					]
 				},
 				{
@@ -1015,7 +1014,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_https_ota",
 					"targetIndexes" : 
 					[
-						23
+						22
 					]
 				},
 				{
@@ -1039,7 +1038,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/protobuf-c",
 					"targetIndexes" : 
 					[
-						57
+						56
 					]
 				},
 				{
@@ -1053,7 +1052,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/protocomm",
 					"targetIndexes" : 
 					[
-						58
+						57
 					]
 				},
 				{
@@ -1067,7 +1066,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/mdns",
 					"targetIndexes" : 
 					[
-						50
+						49
 					]
 				},
 				{
@@ -1081,7 +1080,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_local_ctrl",
 					"targetIndexes" : 
 					[
-						26
+						25
 					]
 				},
 				{
@@ -1095,7 +1094,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/sdmmc",
 					"targetIndexes" : 
 					[
-						60
+						59
 					]
 				},
 				{
@@ -1109,7 +1108,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_serial_slave_link",
 					"targetIndexes" : 
 					[
-						31
+						30
 					]
 				},
 				{
@@ -1123,7 +1122,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esp_websocket_client",
 					"targetIndexes" : 
 					[
-						34
+						33
 					]
 				},
 				{
@@ -1137,8 +1136,8 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/esptool_py",
 					"targetIndexes" : 
 					[
-						77,
-						86
+						76,
+						85
 					]
 				},
 				{
@@ -1152,7 +1151,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/expat",
 					"targetIndexes" : 
 					[
-						37
+						36
 					]
 				},
 				{
@@ -1166,7 +1165,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/wear_levelling",
 					"targetIndexes" : 
 					[
-						69
+						68
 					]
 				},
 				{
@@ -1180,7 +1179,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/fatfs",
 					"targetIndexes" : 
 					[
-						38
+						37
 					]
 				},
 				{
@@ -1194,7 +1193,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/freemodbus",
 					"targetIndexes" : 
 					[
-						39
+						38
 					]
 				},
 				{
@@ -1218,7 +1217,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/jsmn",
 					"targetIndexes" : 
 					[
-						43
+						42
 					]
 				},
 				{
@@ -1232,7 +1231,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/json",
 					"targetIndexes" : 
 					[
-						44
+						43
 					]
 				},
 				{
@@ -1246,7 +1245,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/libsodium",
 					"targetIndexes" : 
 					[
-						45
+						44
 					]
 				},
 				{
@@ -1260,7 +1259,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/mqtt",
 					"targetIndexes" : 
 					[
-						51
+						50
 					]
 				},
 				{
@@ -1274,7 +1273,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/openssl",
 					"targetIndexes" : 
 					[
-						55
+						54
 					]
 				},
 				{
@@ -1288,7 +1287,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/spiffs",
 					"targetIndexes" : 
 					[
-						63
+						62
 					]
 				},
 				{
@@ -1312,7 +1311,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/ulp",
 					"targetIndexes" : 
 					[
-						66
+						65
 					]
 				},
 				{
@@ -1326,7 +1325,7 @@
 					"source" : "/Users/dolpdiego/esp/esp-idf/components/wifi_provisioning",
 					"targetIndexes" : 
 					[
-						70
+						69
 					]
 				},
 				{
@@ -1344,20 +1343,6 @@
 					]
 				},
 				{
-					"build" : "esp-idf/LEDStrip",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.5"
-					},
-					"parentIndex" : 1,
-					"projectIndex" : 1,
-					"source" : "components/LEDStrip",
-					"targetIndexes" : 
-					[
-						1
-					]
-				},
-				{
 					"build" : "esp-idf/main",
 					"minimumCMakeVersion" : 
 					{
@@ -1368,7 +1353,7 @@
 					"source" : "main",
 					"targetIndexes" : 
 					[
-						48
+						47
 					]
 				}
 			],
@@ -1387,22 +1372,22 @@
 					"name" : "blink",
 					"targetIndexes" : 
 					[
-						74,
-						76,
+						73,
+						75,
+						77,
 						78,
-						79,
-						81,
-						88,
-						90,
+						80,
+						87,
+						89,
+						91,
 						92,
-						93,
+						97,
 						98,
-						99,
+						103,
 						104,
 						105,
 						106,
-						107,
-						108
+						107
 					]
 				},
 				{
@@ -1496,8 +1481,7 @@
 						85,
 						86,
 						87,
-						88,
-						89
+						88
 					],
 					"name" : "esp-idf",
 					"parentIndex" : 0,
@@ -1576,21 +1560,20 @@
 						70,
 						71,
 						72,
-						73,
-						77,
-						80,
+						76,
+						79,
+						81,
 						82,
 						83,
 						84,
 						85,
 						86,
-						87,
-						89,
-						91,
+						88,
+						90,
+						99,
 						100,
 						101,
-						102,
-						103
+						102
 					]
 				},
 				{
@@ -1604,11 +1587,11 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						75,
+						74,
+						93,
 						94,
 						95,
-						96,
-						97
+						96
 					]
 				}
 			],
@@ -1622,13 +1605,6 @@
 					"projectIndex" : 1
 				},
 				{
-					"directoryIndex" : 88,
-					"id" : "__idf_LEDStrip::@a0bf35d8fd6d7176f015",
-					"jsonFile" : "target-__idf_LEDStrip-f18a5cd63d6fce7b8c3d.json",
-					"name" : "__idf_LEDStrip",
-					"projectIndex" : 1
-				},
-				{
 					"directoryIndex" : 47,
 					"id" : "__idf_app_trace::@dd7eb3aa23293586d3b8",
 					"jsonFile" : "target-__idf_app_trace-b3b1abebc3f40e385e6f.json",
@@ -1638,7 +1614,7 @@
 				{
 					"directoryIndex" : 9,
 					"id" : "__idf_app_update::@cc3b426666063acc9674",
-					"jsonFile" : "target-__idf_app_update-e4ff94fc200f1d1c0e3a.json",
+					"jsonFile" : "target-__idf_app_update-c15cbb8589c601e29159.json",
 					"name" : "__idf_app_update",
 					"projectIndex" : 1
 				},
@@ -1799,7 +1775,7 @@
 				{
 					"directoryIndex" : 68,
 					"id" : "__idf_esp_local_ctrl::@d6aad58d2946e56208ef",
-					"jsonFile" : "target-__idf_esp_local_ctrl-26a482588bfe7d096a7f.json",
+					"jsonFile" : "target-__idf_esp_local_ctrl-b007fd816fd571c4460c.json",
 					"name" : "__idf_esp_local_ctrl",
 					"projectIndex" : 1
 				},
@@ -1883,7 +1859,7 @@
 				{
 					"directoryIndex" : 75,
 					"id" : "__idf_fatfs::@75ac1d9b25dacc8cc9e7",
-					"jsonFile" : "target-__idf_fatfs-819261c506ffa00eb71c.json",
+					"jsonFile" : "target-__idf_fatfs-c0c13bc7b1820e69dd98.json",
 					"name" : "__idf_fatfs",
 					"projectIndex" : 1
 				},
@@ -1951,9 +1927,9 @@
 					"projectIndex" : 1
 				},
 				{
-					"directoryIndex" : 89,
+					"directoryIndex" : 88,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-091d460e2266b8f55bb8.json",
+					"jsonFile" : "target-__idf_main-96127bb6d7063a012348.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},
@@ -1967,7 +1943,7 @@
 				{
 					"directoryIndex" : 67,
 					"id" : "__idf_mdns::@2f076c6da9dadb273cdc",
-					"jsonFile" : "target-__idf_mdns-469e9a5401ccba093d5b.json",
+					"jsonFile" : "target-__idf_mdns-1ccf78563d559892fd64.json",
 					"name" : "__idf_mdns",
 					"projectIndex" : 1
 				},
@@ -2023,7 +1999,7 @@
 				{
 					"directoryIndex" : 66,
 					"id" : "__idf_protocomm::@d76d01c8dec06205e1fc",
-					"jsonFile" : "target-__idf_protocomm-d272df6eeb486effc9d9.json",
+					"jsonFile" : "target-__idf_protocomm-2ef5d7adfee2c7466fb0.json",
 					"name" : "__idf_protocomm",
 					"projectIndex" : 1
 				},
@@ -2107,7 +2083,7 @@
 				{
 					"directoryIndex" : 86,
 					"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098",
-					"jsonFile" : "target-__idf_wifi_provisioning-905f84034d329f3b4678.json",
+					"jsonFile" : "target-__idf_wifi_provisioning-35bb77211d554d88d54d.json",
 					"name" : "__idf_wifi_provisioning",
 					"projectIndex" : 1
 				},
@@ -2128,7 +2104,7 @@
 				{
 					"directoryIndex" : 40,
 					"id" : "__ldgen_output_esp32.project.ld::@c361781f7cb51efad0ea",
-					"jsonFile" : "target-__ldgen_output_esp32.project.ld-fa4d8f1ba7c183323522.json",
+					"jsonFile" : "target-__ldgen_output_esp32.project.ld-1a8abe14fa691435e4b2.json",
 					"name" : "__ldgen_output_esp32.project.ld",
 					"projectIndex" : 1
 				},
@@ -2163,7 +2139,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "blink.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-blink.elf-f36b68ec35f042efc9f0.json",
+					"jsonFile" : "target-blink.elf-c715a8e50fc93a0005a5.json",
 					"name" : "blink.elf",
 					"projectIndex" : 0
 				},
@@ -2261,7 +2237,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "flash::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-flash-d22fe1cfb49d8be902ed.json",
+					"jsonFile" : "target-flash-feea513fe21acd79510d.json",
 					"name" : "flash",
 					"projectIndex" : 0
 				},

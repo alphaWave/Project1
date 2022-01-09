@@ -46,6 +46,8 @@
 
 // my includes (to replace Arduino.h)
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 #define USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPI
 

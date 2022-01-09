@@ -48,7 +48,7 @@ CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Choose the type of build: None Debug Release Coverage ASan ASanDbg
 // MemSan MemSanDbg Check CheckFull
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -114,8 +114,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
@@ -497,6 +497,9 @@ __idf_xtensa_LIB_DEPENDS:STATIC=general;__idf_cxx;general;__idf_newlib;general;_
 blink_BINARY_DIR:STATIC=/Users/dolpdiego/CodingProjects/-Project1/Project1/build
 
 //Value Computed by CMake
+blink_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
 blink_SOURCE_DIR:STATIC=/Users/dolpdiego/CodingProjects/-Project1/Project1
 
 //Value Computed by CMake
@@ -588,6 +591,8 @@ CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
+//Path to cache edit program executable.
+CMAKE_EDIT_COMMAND:INTERNAL=/usr/local/Cellar/cmake/3.22.1/bin/ccmake
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS

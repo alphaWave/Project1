@@ -555,6 +555,54 @@
 	[
 		{
 			"backtrace" : 3,
+			"id" : "__idf_esp_websocket_client::@2aa04d350e0c9afab7cd"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_expat::@af4f74c6fac3f93a3341"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_wear_levelling::@cb21b0d7c0815cff11c6"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_fatfs::@75ac1d9b25dacc8cc9e7"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_protocomm::@d76d01c8dec06205e1fc"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_protobuf-c::@b14513c4bd859268ec22"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_mdns::@2f076c6da9dadb273cdc"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_esp_local_ctrl::@d6aad58d2946e56208ef"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "_project_elf_src::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "__ldgen_output_esp32.project.ld::@c361781f7cb51efad0ea"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_asio::@db1a8833e22596808d70"
+		},
+		{
+			"backtrace" : 3,
 			"id" : "__idf_cbor::@54bec30243cbf65f6214"
 		},
 		{
@@ -580,54 +628,6 @@
 		{
 			"backtrace" : 3,
 			"id" : "__idf_esp_hid::@15df40e16a5d8775dd9b"
-		},
-		{
-			"backtrace" : 4,
-			"id" : "_project_elf_src::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_asio::@db1a8833e22596808d70"
-		},
-		{
-			"backtrace" : 8,
-			"id" : "__ldgen_output_esp32.project.ld::@c361781f7cb51efad0ea"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_protobuf-c::@b14513c4bd859268ec22"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_protocomm::@d76d01c8dec06205e1fc"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_mdns::@2f076c6da9dadb273cdc"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_esp_local_ctrl::@d6aad58d2946e56208ef"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_esp_websocket_client::@2aa04d350e0c9afab7cd"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_expat::@af4f74c6fac3f93a3341"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_wear_levelling::@cb21b0d7c0815cff11c6"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_fatfs::@75ac1d9b25dacc8cc9e7"
 		},
 		{
 			"backtrace" : 3,

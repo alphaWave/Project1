@@ -1638,7 +1638,7 @@
 				{
 					"directoryIndex" : 9,
 					"id" : "__idf_app_update::@cc3b426666063acc9674",
-					"jsonFile" : "target-__idf_app_update-b41727c4c1738bb7b842.json",
+					"jsonFile" : "target-__idf_app_update-e4ff94fc200f1d1c0e3a.json",
 					"name" : "__idf_app_update",
 					"projectIndex" : 1
 				},
@@ -1666,7 +1666,7 @@
 				{
 					"directoryIndex" : 53,
 					"id" : "__idf_cmock::@38f9eb59693b7394f54c",
-					"jsonFile" : "target-__idf_cmock-9375182a21e38c50dd73.json",
+					"jsonFile" : "target-__idf_cmock-e2d2dba993ce8bb4ba0f.json",
 					"name" : "__idf_cmock",
 					"projectIndex" : 1
 				},
@@ -1799,7 +1799,7 @@
 				{
 					"directoryIndex" : 68,
 					"id" : "__idf_esp_local_ctrl::@d6aad58d2946e56208ef",
-					"jsonFile" : "target-__idf_esp_local_ctrl-4ccc0cb399427ddd5c6c.json",
+					"jsonFile" : "target-__idf_esp_local_ctrl-26a482588bfe7d096a7f.json",
 					"name" : "__idf_esp_local_ctrl",
 					"projectIndex" : 1
 				},
@@ -1883,7 +1883,7 @@
 				{
 					"directoryIndex" : 75,
 					"id" : "__idf_fatfs::@75ac1d9b25dacc8cc9e7",
-					"jsonFile" : "target-__idf_fatfs-c0c13bc7b1820e69dd98.json",
+					"jsonFile" : "target-__idf_fatfs-819261c506ffa00eb71c.json",
 					"name" : "__idf_fatfs",
 					"projectIndex" : 1
 				},
@@ -1953,7 +1953,7 @@
 				{
 					"directoryIndex" : 89,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-7fc57e569f21815f4526.json",
+					"jsonFile" : "target-__idf_main-091d460e2266b8f55bb8.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},
@@ -1967,7 +1967,7 @@
 				{
 					"directoryIndex" : 67,
 					"id" : "__idf_mdns::@2f076c6da9dadb273cdc",
-					"jsonFile" : "target-__idf_mdns-1ccf78563d559892fd64.json",
+					"jsonFile" : "target-__idf_mdns-469e9a5401ccba093d5b.json",
 					"name" : "__idf_mdns",
 					"projectIndex" : 1
 				},
@@ -2023,7 +2023,7 @@
 				{
 					"directoryIndex" : 66,
 					"id" : "__idf_protocomm::@d76d01c8dec06205e1fc",
-					"jsonFile" : "target-__idf_protocomm-23e35c930d316447474c.json",
+					"jsonFile" : "target-__idf_protocomm-d272df6eeb486effc9d9.json",
 					"name" : "__idf_protocomm",
 					"projectIndex" : 1
 				},
@@ -2107,7 +2107,7 @@
 				{
 					"directoryIndex" : 86,
 					"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098",
-					"jsonFile" : "target-__idf_wifi_provisioning-6082c2aaccb3d245eb64.json",
+					"jsonFile" : "target-__idf_wifi_provisioning-905f84034d329f3b4678.json",
 					"name" : "__idf_wifi_provisioning",
 					"projectIndex" : 1
 				},
@@ -2128,7 +2128,7 @@
 				{
 					"directoryIndex" : 40,
 					"id" : "__ldgen_output_esp32.project.ld::@c361781f7cb51efad0ea",
-					"jsonFile" : "target-__ldgen_output_esp32.project.ld-a1516e085893d871ce8c.json",
+					"jsonFile" : "target-__ldgen_output_esp32.project.ld-fa4d8f1ba7c183323522.json",
 					"name" : "__ldgen_output_esp32.project.ld",
 					"projectIndex" : 1
 				},
@@ -2163,7 +2163,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "blink.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-blink.elf-86d73b05bc234941d1d5.json",
+					"jsonFile" : "target-blink.elf-f36b68ec35f042efc9f0.json",
 					"name" : "blink.elf",
 					"projectIndex" : 0
 				},

@@ -44,6 +44,9 @@
 // #include <SPI.h>
 // #endif
 
+// my includes (to replace Arduino.h)
+#include <stdlib.h>
+
 #define USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPI
 
 /*!
@@ -57,10 +60,11 @@
   @return  Adafruit_DotStar object. Call the begin() function before use.
 */
 Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t o)
-    : numLEDs(n), dataPin(USE_HW_SPI), brightness(0), pixels(NULL),
+    : numLEDs(n), dataPin(USE_HW_SPI), brightness(0), pixels(nullptr),
       rOffset(o & 3), gOffset((o >> 2) & 3), bOffset((o >> 4) & 3) {
   updateLength(n);
 }
+// was pixels(NULL) before (using Arduino's NULL). Not sure if pixels(nullptr) works.
 
 /*!
   @brief   DotStar constructor for 'soft' (bitbang) SPI. Any two pins
@@ -76,10 +80,11 @@ Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t o)
 */
 Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t data, uint8_t clock,
                                    uint8_t o)
-    : dataPin(data), clockPin(clock), brightness(0), pixels(NULL),
+    : dataPin(data), clockPin(clock), brightness(0), pixels(nullptr),
       rOffset(o & 3), gOffset((o >> 2) & 3), bOffset((o >> 4) & 3) {
   updateLength(n);
 }
+// was pixels(NULL) before (using Arduino's NULL). Not sure if pixels(0) works.
 
 /*!
   @brief   Deallocate Adafruit_DotStar object, set data and clock pins

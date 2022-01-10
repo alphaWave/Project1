@@ -48,6 +48,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "driver/gpio.h"
 
 
 #define USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPI
@@ -178,56 +179,56 @@ void Adafruit_DotStar::updateLength(uint16_t n)
 }
 
 
-// NOTE: PROPER SPI HAS NOT YET BEEN IMPLEMENTED WITHOUT ARDUINO-FRAMEWORK. 
+// NOTE DD: PROPER HW-SPI HAS NOT YET BEEN IMPLEMENTED WITHOUT ARDUINO-FRAMEWORK. 
 
-// // SPI STUFF ---------------------------------------------------------------
+// SPI STUFF ---------------------------------------------------------------
 
-// /*!
-//   @brief   Initialize hardware SPI.
-//   @note    This library is written in pre-SPI-transactions style and needs
-//            some rewriting to correctly share the SPI bus with other devices.
-// */
-// void Adafruit_DotStar::hw_spi_init(void)
-// { // Initialize hardware SPI
-// #ifdef __AVR_ATtiny85__
-//   PORTB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Outputs
-//   DDRB |= _BV(PORTB1) | _BV(PORTB2);     // DO (NOT MOSI) + SCK
-// #elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
-//   SPI.begin();
-//   // Hardware SPI clock speeds are chosen to run at roughly 1-8 MHz for most
-//   // boards, providing a slower but more reliable experience by default.  If
-//   // you want faster LED updates, experiment with the clock speeds to find
-//   // what works best with your particular setup.
-// #if defined(__AVR__) || defined(CORE_TEENSY) || defined(__ARDUINO_ARC__) || \
-//     defined(__ARDUINO_X86__)
-//   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz (6 MHz on Pro Trinket 3V)
-// #else
-// #ifdef ESP8266
-//   SPI.setFrequency(8000000L);
-// #elif defined(PIC32)
-//   // Use begin/end transaction to set SPI clock rate
-//   SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
-//   SPI.endTransaction();
-// #else
-//   SPI.setClockDivider((F_CPU + 4000000L) / 8000000L); // 8-ish MHz on Due
-// #endif
-// #endif
-//   SPI.setBitOrder(MSBFIRST);
-//   SPI.setDataMode(SPI_MODE0);
-// #endif
-// }
+/*!
+  @brief   Initialize hardware SPI.
+  @note    This library is written in pre-SPI-transactions style and needs
+           some rewriting to correctly share the SPI bus with other devices.
+*/
+void Adafruit_DotStar::hw_spi_init(void)
+{ // Initialize hardware SPI
+#ifdef __AVR_ATtiny85__
+  PORTB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Outputs
+  DDRB |= _BV(PORTB1) | _BV(PORTB2);     // DO (NOT MOSI) + SCK
+#elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
+  SPI.begin();
+  // Hardware SPI clock speeds are chosen to run at roughly 1-8 MHz for most
+  // boards, providing a slower but more reliable experience by default.  If
+  // you want faster LED updates, experiment with the clock speeds to find
+  // what works best with your particular setup.
+#if defined(__AVR__) || defined(CORE_TEENSY) || defined(__ARDUINO_ARC__) || \
+    defined(__ARDUINO_X86__)
+  SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz (6 MHz on Pro Trinket 3V)
+#else
+#ifdef ESP8266
+  SPI.setFrequency(8000000L);
+#elif defined(PIC32)
+  // Use begin/end transaction to set SPI clock rate
+  SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
+  SPI.endTransaction();
+#else
+  SPI.setClockDivider((F_CPU + 4000000L) / 8000000L); // 8-ish MHz on Due
+#endif
+#endif
+  SPI.setBitOrder(MSBFIRST);
+  SPI.setDataMode(SPI_MODE0);
+#endif
+}
 
-// /*!
-//   @brief   Stop hardware SPI.
-// */
-// void Adafruit_DotStar::hw_spi_end(void)
-// {
-// #ifdef __AVR_ATtiny85__
-//   DDRB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Inputs
-// #elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
-//   SPI.end();
-// #endif
-// }
+/*!
+  @brief   Stop hardware SPI.
+*/
+void Adafruit_DotStar::hw_spi_end(void)
+{
+#ifdef __AVR_ATtiny85__
+  DDRB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Inputs
+#elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
+  SPI.end();
+#endif
+}
 
 // END OF SPI
 
@@ -238,8 +239,19 @@ void Adafruit_DotStar::updateLength(uint16_t n)
 */
 void Adafruit_DotStar::sw_spi_init(void)
 {
-  pinMode(dataPin, OUTPUT);
-  pinMode(clockPin, OUTPUT);
+  gpio_num_t DATA_GPIO{};
+  DATA_GPIO = static_cast<gpio_num_t>(dataPin);
+  gpio_reset_pin(DATA_GPIO);
+  gpio_set_direction(DATA_GPIO, GPIO_MODE_OUTPUT);
+
+  gpio_num_t CLOCK_GPIO{};
+  CLOCK_GPIO = static_cast<gpio_num_t>(clockPin);
+  gpio_reset_pin(CLOCK_GPIO);
+  gpio_set_direction(CLOCK_GPIO, GPIO_MODE_OUTPUT);
+
+
+  // pinMode(dataPin, OUTPUT);
+  // pinMode(clockPin, OUTPUT);
 #ifdef __AVR__
   dataPort = portOutputRegister(digitalPinToPort(dataPin));
   clockPort = portOutputRegister(digitalPinToPort(clockPin));
@@ -248,8 +260,11 @@ void Adafruit_DotStar::sw_spi_init(void)
   *dataPort &= ~dataPinMask;
   *clockPort &= ~clockPinMask;
 #else
-  digitalWrite(dataPin, LOW);
-  digitalWrite(clockPin, LOW);
+  gpio_set_level(DATA_GPIO, 0);
+  gpio_set_level(CLOCK_GPIO, 0);
+
+  // digitalWrite(dataPin, LOW);
+  // digitalWrite(clockPin, LOW);
 #endif
 }
 
@@ -258,42 +273,53 @@ void Adafruit_DotStar::sw_spi_init(void)
 */
 void Adafruit_DotStar::sw_spi_end()
 {
-  pinMode(dataPin, INPUT);
-  pinMode(clockPin, INPUT);
-}
+  gpio_num_t DATA_GPIO{};
+  DATA_GPIO = static_cast<gpio_num_t>(dataPin);
+  gpio_reset_pin(DATA_GPIO);
+  gpio_set_direction(DATA_GPIO, GPIO_MODE_INPUT);
 
-#ifdef __AVR_ATtiny85__
+  gpio_num_t CLOCK_GPIO{};
+  CLOCK_GPIO = static_cast<gpio_num_t>(clockPin);
+  gpio_reset_pin(CLOCK_GPIO);
+  gpio_set_direction(CLOCK_GPIO, GPIO_MODE_INPUT);
+
+  // pinMode(dataPin, INPUT);
+  // pinMode(clockPin, INPUT);
+}
 
 
 // CONTINUATION OF UN-IMPLEMENTED HARDWARE-SPI
 
-// // Teensy/Gemma-specific stuff for hardware-half-assisted SPI
 
-// #define SPIBIT                            \
-//   USICR = ((1 << USIWM0) | (1 << USITC)); \
-//   USICR =                                 \
-//       ((1 << USIWM0) | (1 << USITC) | (1 << USICLK)); // Clock bit tick, tock
+#ifdef __AVR_ATtiny85__
 
-// static void spi_out(uint8_t n)
-// { // Clock out one byte
-//   USIDR = n;
-//   SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT
-// }
+// Teensy/Gemma-specific stuff for hardware-half-assisted SPI
 
-// #elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
+#define SPIBIT                            \
+  USICR = ((1 << USIWM0) | (1 << USITC)); \
+  USICR =                                 \
+      ((1 << USIWM0) | (1 << USITC) | (1 << USICLK)); // Clock bit tick, tock
 
-// // All other boards have full-featured hardware support for SPI
+static void spi_out(uint8_t n)
+{ // Clock out one byte
+  USIDR = n;
+  SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT
+}
 
-// #define spi_out(n) (void)SPI.transfer(n) ///< Call hardware SPI function
-// // Pipelining reads next byte while current byte is clocked out
-// #if (defined(__AVR__) && !defined(__AVR_ATtiny85__)) || defined(CORE_TEENSY)
-// #define SPI_PIPELINE
-// #endif
+#elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
 
-// #else // no hardware spi
-// #define spi_out(n) sw_spi_out(n)
+// All other boards have full-featured hardware support for SPI
 
-// #endif
+#define spi_out(n) (void)SPI.transfer(n) ///< Call hardware SPI function
+// Pipelining reads next byte while current byte is clocked out
+#if (defined(__AVR__) && !defined(__AVR_ATtiny85__)) || defined(CORE_TEENSY)
+#define SPI_PIPELINE
+#endif
+
+#else // no hardware spi
+#define spi_out(n) sw_spi_out(n)
+
+#endif
 
 // END OF SECOND PART OF HARDWARE-SPI
 
@@ -315,14 +341,18 @@ void Adafruit_DotStar::sw_spi_out(uint8_t n)
     *clockPort &= ~clockPinMask;
 #else
     if (n & 0x80)
-      digitalWrite(dataPin, HIGH);
+      gpio_set_level(static_cast<gpio_num_t>(dataPin), 1);
+      // digitalWrite(dataPin, HIGH);
     else
-      digitalWrite(dataPin, LOW);
-    digitalWrite(clockPin, HIGH);
+      gpio_set_level(static_cast<gpio_num_t>(dataPin), 0);
+      // digitalWrite(dataPin, LOW);
+    gpio_set_level(static_cast<gpio_num_t>(clockPin), 1);
+    // digitalWrite(clockPin, HIGH);
 #if F_CPU >= 48000000
     __asm__ volatile("nop \n nop");
 #endif
-    digitalWrite(clockPin, LOW);
+    gpio_set_level(static_cast<gpio_num_t>(clockPin), 0);
+    // digitalWrite(clockPin, LOW);
 #if F_CPU >= 48000000
     __asm__ volatile("nop \n nop");
 #endif

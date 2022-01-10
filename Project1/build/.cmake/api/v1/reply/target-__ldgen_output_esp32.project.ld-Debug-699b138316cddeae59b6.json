@@ -45,6 +45,30 @@
 			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
 		},
 		{
+			"id" : "__idf_asio::@db1a8833e22596808d70"
+		},
+		{
+			"id" : "__idf_cbor::@54bec30243cbf65f6214"
+		},
+		{
+			"id" : "__idf_unity::@fec746937506b5690992"
+		},
+		{
+			"id" : "__idf_cmock::@38f9eb59693b7394f54c"
+		},
+		{
+			"id" : "__idf_coap::@9ea4196552bc90428972"
+		},
+		{
+			"id" : "__idf_console::@4311ed8d271cc0ee1422"
+		},
+		{
+			"id" : "__idf_esp_adc_cal::@dc736dc1d836ef36c9a5"
+		},
+		{
+			"id" : "__idf_esp_hid::@15df40e16a5d8775dd9b"
+		},
+		{
 			"id" : "__idf_protobuf-c::@b14513c4bd859268ec22"
 		},
 		{
@@ -88,30 +112,6 @@
 		},
 		{
 			"id" : "__idf_spiffs::@df881b71474064c86689"
-		},
-		{
-			"id" : "__idf_asio::@db1a8833e22596808d70"
-		},
-		{
-			"id" : "__idf_cbor::@54bec30243cbf65f6214"
-		},
-		{
-			"id" : "__idf_unity::@fec746937506b5690992"
-		},
-		{
-			"id" : "__idf_cmock::@38f9eb59693b7394f54c"
-		},
-		{
-			"id" : "__idf_coap::@9ea4196552bc90428972"
-		},
-		{
-			"id" : "__idf_console::@4311ed8d271cc0ee1422"
-		},
-		{
-			"id" : "__idf_esp_adc_cal::@dc736dc1d836ef36c9a5"
-		},
-		{
-			"id" : "__idf_esp_hid::@15df40e16a5d8775dd9b"
 		},
 		{
 			"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098"

@@ -63,10 +63,12 @@
 */
 Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t o)
     : numLEDs(n), dataPin(USE_HW_SPI), brightness(0), pixels(nullptr),
-      rOffset(o & 3), gOffset((o >> 2) & 3), bOffset((o >> 4) & 3) {
+      rOffset(o & 3), gOffset((o >> 2) & 3), bOffset((o >> 4) & 3)
+{
   updateLength(n);
 }
 // was pixels(NULL) before (using Arduino's NULL). Not sure if pixels(nullptr) works.
+
 
 /*!
   @brief   DotStar constructor for 'soft' (bitbang) SPI. Any two pins
@@ -83,7 +85,8 @@ Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t o)
 Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t data, uint8_t clock,
                                    uint8_t o)
     : dataPin(data), clockPin(clock), brightness(0), pixels(nullptr),
-      rOffset(o & 3), gOffset((o >> 2) & 3), bOffset((o >> 4) & 3) {
+      rOffset(o & 3), gOffset((o >> 2) & 3), bOffset((o >> 4) & 3)
+{
   updateLength(n);
 }
 // was pixels(NULL) before (using Arduino's NULL). Not sure if pixels(0) works.
@@ -92,7 +95,8 @@ Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t data, uint8_t clock,
   @brief   Deallocate Adafruit_DotStar object, set data and clock pins
            back to INPUT.
 */
-Adafruit_DotStar::~Adafruit_DotStar(void) {
+Adafruit_DotStar::~Adafruit_DotStar(void)
+{
   free(pixels);
   if (dataPin == USE_HW_SPI)
     hw_spi_end();
@@ -104,7 +108,8 @@ Adafruit_DotStar::~Adafruit_DotStar(void) {
   @brief   Initialize Adafruit_DotStar object -- sets data and clock pins
            to outputs and initializes hardware SPI if necessary.
 */
-void Adafruit_DotStar::begin(void) {
+void Adafruit_DotStar::begin(void)
+{
   if (dataPin == USE_HW_SPI)
     hw_spi_init();
   else
@@ -122,7 +127,8 @@ void Adafruit_DotStar::begin(void) {
            MOSI, SCK pins. Data in pixel buffer is unaffected and can
            continue to be used.
 */
-void Adafruit_DotStar::updatePins(void) {
+void Adafruit_DotStar::updatePins(void)
+{
   sw_spi_end();
   dataPin = USE_HW_SPI;
   hw_spi_init();
@@ -135,7 +141,8 @@ void Adafruit_DotStar::updatePins(void) {
   @param   data   Arduino pin number for data out.
   @param   clock  Arduino pin number for clock out.
 */
-void Adafruit_DotStar::updatePins(uint8_t data, uint8_t clock) {
+void Adafruit_DotStar::updatePins(uint8_t data, uint8_t clock)
+{
   hw_spi_end();
   dataPin = data;
   clockPin = clock;
@@ -151,16 +158,20 @@ void Adafruit_DotStar::updatePins(uint8_t data, uint8_t clock) {
            may still be calling it. New projects should instead use the
            'new' keyword.
 */
-void Adafruit_DotStar::updateLength(uint16_t n) {
+void Adafruit_DotStar::updateLength(uint16_t n)
+{
   free(pixels);
   uint16_t bytes = (rOffset == gOffset)
                        ? n + ((n + 3) / 4)
                        :      // MONO: 10 bits/pixel, round up to next byte
                        n * 3; // COLOR: 3 bytes/pixel
-  if ((pixels = (uint8_t *)malloc(bytes))) {
+  if ((pixels = (uint8_t *)malloc(bytes)))
+  {
     numLEDs = n;
     clear();
-  } else {
+  }
+  else
+  {
     numLEDs = 0;
   }
 }
@@ -172,7 +183,8 @@ void Adafruit_DotStar::updateLength(uint16_t n) {
   @note    This library is written in pre-SPI-transactions style and needs
            some rewriting to correctly share the SPI bus with other devices.
 */
-void Adafruit_DotStar::hw_spi_init(void) { // Initialize hardware SPI
+void Adafruit_DotStar::hw_spi_init(void)
+{ // Initialize hardware SPI
 #ifdef __AVR_ATtiny85__
   PORTB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Outputs
   DDRB |= _BV(PORTB1) | _BV(PORTB2);     // DO (NOT MOSI) + SCK
@@ -182,7 +194,7 @@ void Adafruit_DotStar::hw_spi_init(void) { // Initialize hardware SPI
   // boards, providing a slower but more reliable experience by default.  If
   // you want faster LED updates, experiment with the clock speeds to find
   // what works best with your particular setup.
-#if defined(__AVR__) || defined(CORE_TEENSY) || defined(__ARDUINO_ARC__) ||    \
+#if defined(__AVR__) || defined(CORE_TEENSY) || defined(__ARDUINO_ARC__) || \
     defined(__ARDUINO_X86__)
   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz (6 MHz on Pro Trinket 3V)
 #else
@@ -204,7 +216,8 @@ void Adafruit_DotStar::hw_spi_init(void) { // Initialize hardware SPI
 /*!
   @brief   Stop hardware SPI.
 */
-void Adafruit_DotStar::hw_spi_end(void) {
+void Adafruit_DotStar::hw_spi_end(void)
+{
 #ifdef __AVR_ATtiny85__
   DDRB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Inputs
 #elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
@@ -216,7 +229,8 @@ void Adafruit_DotStar::hw_spi_end(void) {
   @brief   Initialize 'soft' (bitbang) SPI. Data and clock pins are set
            to outputs.
 */
-void Adafruit_DotStar::sw_spi_init(void) {
+void Adafruit_DotStar::sw_spi_init(void)
+{
   pinMode(dataPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
 #ifdef __AVR__
@@ -235,7 +249,8 @@ void Adafruit_DotStar::sw_spi_init(void) {
 /*!
   @brief   Stop 'soft' (bitbang) SPI. Data and clock pins are set to inputs.
 */
-void Adafruit_DotStar::sw_spi_end() {
+void Adafruit_DotStar::sw_spi_end()
+{
   pinMode(dataPin, INPUT);
   pinMode(clockPin, INPUT);
 }
@@ -244,12 +259,13 @@ void Adafruit_DotStar::sw_spi_end() {
 
 // Teensy/Gemma-specific stuff for hardware-half-assisted SPI
 
-#define SPIBIT                                                                 \
-  USICR = ((1 << USIWM0) | (1 << USITC));                                      \
-  USICR =                                                                      \
+#define SPIBIT                            \
+  USICR = ((1 << USIWM0) | (1 << USITC)); \
+  USICR =                                 \
       ((1 << USIWM0) | (1 << USITC) | (1 << USICLK)); // Clock bit tick, tock
 
-static void spi_out(uint8_t n) { // Clock out one byte
+static void spi_out(uint8_t n)
+{ // Clock out one byte
   USIDR = n;
   SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT
 }
@@ -273,8 +289,10 @@ static void spi_out(uint8_t n) { // Clock out one byte
   @brief   Soft (bitbang) SPI write.
   @param   n  8-bit value to transfer.
 */
-void Adafruit_DotStar::sw_spi_out(uint8_t n) {
-  for (uint8_t i = 8; i--; n <<= 1) {
+void Adafruit_DotStar::sw_spi_out(uint8_t n)
+{
+  for (uint8_t i = 8; i--; n <<= 1)
+  {
 #ifdef __AVR__
     if (n & 0x80)
       *dataPort |= dataPinMask;
@@ -316,7 +334,8 @@ void Adafruit_DotStar::sw_spi_out(uint8_t n) {
 /*!
   @brief   Transmit pixel data in RAM to DotStars.
 */
-void Adafruit_DotStar::show(void) {
+void Adafruit_DotStar::show(void)
+{
 
   if (!pixels)
     return;
@@ -325,7 +344,8 @@ void Adafruit_DotStar::show(void) {
   uint16_t n = numLEDs;                // Counter
   uint16_t b16 = (uint16_t)brightness; // Type-convert for fixed-point math
 
-  if (dataPin == USE_HW_SPI) {
+  if (dataPin == USE_HW_SPI)
+  {
 
     // TO DO: modernize this for SPI transactions
 
@@ -334,11 +354,13 @@ void Adafruit_DotStar::show(void) {
     for (i = 0; i < 3; i++)
       spi_out(0x00); // First 3 start-frame bytes
     SPDR = 0x00;     // 4th is pipelined
-    do {             // For each pixel...
+    do
+    { // For each pixel...
       while (!(SPSR & _BV(SPIF)))
-        ;                       //  Wait for prior byte out
-      SPDR = 0xFF;              //  Pixel start
-      for (i = 0; i < 3; i++) { //  For R,G,B...
+        ;          //  Wait for prior byte out
+      SPDR = 0xFF; //  Pixel start
+      for (i = 0; i < 3; i++)
+      {                                                   //  For R,G,B...
         next = brightness ? (*ptr++ * b16) >> 8 : *ptr++; // Read, scale
         while (!(SPSR & _BV(SPIF)))
           ;          //   Wait for prior byte out
@@ -349,15 +371,20 @@ void Adafruit_DotStar::show(void) {
       ; // Wait for last byte out
 #else
     for (i = 0; i < 4; i++)
-      spi_out(0x00);   // 4 byte start-frame marker
-    if (brightness) {  // Scale pixel brightness on output
-      do {             // For each pixel...
+      spi_out(0x00); // 4 byte start-frame marker
+    if (brightness)
+    { // Scale pixel brightness on output
+      do
+      {                // For each pixel...
         spi_out(0xFF); //  Pixel start
         for (i = 0; i < 3; i++)
           spi_out((*ptr++ * b16) >> 8); // Scale, write RGB
       } while (--n);
-    } else {           // Full brightness (no scaling)
-      do {             // For each pixel...
+    }
+    else
+    { // Full brightness (no scaling)
+      do
+      {                // For each pixel...
         spi_out(0xFF); //  Pixel start
         for (i = 0; i < 3; i++)
           spi_out(*ptr++); // Write R,G,B
@@ -375,19 +402,25 @@ void Adafruit_DotStar::show(void) {
     // https://cpldcpu.wordpress.com/2014/11/30/understanding-the-apa102-superled/
     for (i = 0; i < ((numLEDs + 15) / 16); i++)
       spi_out(0xFF);
-
-  } else { // Soft (bitbang) SPI
+  }
+  else
+  { // Soft (bitbang) SPI
 
     for (i = 0; i < 4; i++)
-      sw_spi_out(0);      // Start-frame marker
-    if (brightness) {     // Scale pixel brightness on output
-      do {                // For each pixel...
+      sw_spi_out(0); // Start-frame marker
+    if (brightness)
+    { // Scale pixel brightness on output
+      do
+      {                   // For each pixel...
         sw_spi_out(0xFF); //  Pixel start
         for (i = 0; i < 3; i++)
           sw_spi_out((*ptr++ * b16) >> 8); // Scale, write
       } while (--n);
-    } else {              // Full brightness (no scaling)
-      do {                // For each pixel...
+    }
+    else
+    { // Full brightness (no scaling)
+      do
+      {                   // For each pixel...
         sw_spi_out(0xFF); //  Pixel start
         for (i = 0; i < 3; i++)
           sw_spi_out(*ptr++); // R,G,B
@@ -401,7 +434,8 @@ void Adafruit_DotStar::show(void) {
 /*!
   @brief   Fill the whole DotStar strip with 0 / black / off.
 */
-void Adafruit_DotStar::clear() {
+void Adafruit_DotStar::clear()
+{
   memset(pixels, 0,
          (rOffset == gOffset) ? numLEDs + ((numLEDs + 3) / 4)
                               : // MONO: 10 bits/pixel
@@ -416,8 +450,10 @@ void Adafruit_DotStar::clear() {
   @param   b  Blue brightness, 0 = minimum (off), 255 = maximum.
 */
 void Adafruit_DotStar::setPixelColor(uint16_t n, uint8_t r, uint8_t g,
-                                     uint8_t b) {
-  if (n < numLEDs) {
+                                     uint8_t b)
+{
+  if (n < numLEDs)
+  {
     uint8_t *p = &pixels[n * 3];
     p[rOffset] = r;
     p[gOffset] = g;
@@ -432,8 +468,10 @@ void Adafruit_DotStar::setPixelColor(uint16_t n, uint8_t r, uint8_t g,
               red, then green, and least significant byte is blue.
               e.g. 0x00RRGGBB
 */
-void Adafruit_DotStar::setPixelColor(uint16_t n, uint32_t c) {
-  if (n < numLEDs) {
+void Adafruit_DotStar::setPixelColor(uint16_t n, uint32_t c)
+{
+  if (n < numLEDs)
+  {
     uint8_t *p = &pixels[n * 3];
     p[rOffset] = (uint8_t)(c >> 16);
     p[gOffset] = (uint8_t)(c >> 8);
@@ -452,25 +490,31 @@ void Adafruit_DotStar::setPixelColor(uint16_t n, uint32_t c) {
   @param   count  Number of pixels to fill, as a positive value. Passing
                   0 or leaving unspecified will fill to end of strip.
 */
-void Adafruit_DotStar::fill(uint32_t c, uint16_t first, uint16_t count) {
+void Adafruit_DotStar::fill(uint32_t c, uint16_t first, uint16_t count)
+{
   uint16_t i, end;
 
-  if (first >= numLEDs) {
+  if (first >= numLEDs)
+  {
     return; // If first LED is past end of strip, nothing to do
   }
 
   // Calculate the index ONE AFTER the last pixel to fill
-  if (count == 0) {
+  if (count == 0)
+  {
     // Fill to end of strip
     end = numLEDs;
-  } else {
+  }
+  else
+  {
     // Ensure that the loop won't go past the last pixel
     end = first + count;
     if (end > numLEDs)
       end = numLEDs;
   }
 
-  for (i = first; i < end; i++) {
+  for (i = first; i < end; i++)
+  {
     this->setPixelColor(i, c);
   }
 }
@@ -497,7 +541,8 @@ void Adafruit_DotStar::fill(uint32_t c, uint16_t first, uint16_t count) {
            operation of gamma32(). Diffusing the LEDs also really seems to
            help when using low-saturation colors.
 */
-uint32_t Adafruit_DotStar::ColorHSV(uint16_t hue, uint8_t sat, uint8_t val) {
+uint32_t Adafruit_DotStar::ColorHSV(uint16_t hue, uint8_t sat, uint8_t val)
+{
 
   uint8_t r, g, b;
 
@@ -532,34 +577,50 @@ uint32_t Adafruit_DotStar::ColorHSV(uint16_t hue, uint8_t sat, uint8_t val) {
   // the constants below are not the multiples of 256 you might expect.
 
   // Convert hue to R,G,B (nested ifs faster than divide+mod+switch):
-  if (hue < 510) { // Red to Green-1
+  if (hue < 510)
+  { // Red to Green-1
     b = 0;
-    if (hue < 255) { //   Red to Yellow-1
+    if (hue < 255)
+    { //   Red to Yellow-1
       r = 255;
-      g = hue;       //     g = 0 to 254
-    } else {         //   Yellow to Green-1
+      g = hue; //     g = 0 to 254
+    }
+    else
+    {                //   Yellow to Green-1
       r = 510 - hue; //     r = 255 to 1
       g = 255;
     }
-  } else if (hue < 1020) { // Green to Blue-1
+  }
+  else if (hue < 1020)
+  { // Green to Blue-1
     r = 0;
-    if (hue < 765) { //   Green to Cyan-1
+    if (hue < 765)
+    { //   Green to Cyan-1
       g = 255;
-      b = hue - 510;  //     b = 0 to 254
-    } else {          //   Cyan to Blue-1
+      b = hue - 510; //     b = 0 to 254
+    }
+    else
+    {                 //   Cyan to Blue-1
       g = 1020 - hue; //     g = 255 to 1
       b = 255;
     }
-  } else if (hue < 1530) { // Blue to Red-1
+  }
+  else if (hue < 1530)
+  { // Blue to Red-1
     g = 0;
-    if (hue < 1275) { //   Blue to Magenta-1
+    if (hue < 1275)
+    {                 //   Blue to Magenta-1
       r = hue - 1020; //     r = 0 to 254
       b = 255;
-    } else { //   Magenta to Red-1
+    }
+    else
+    { //   Magenta to Red-1
       r = 255;
       b = 1530 - hue; //     b = 255 to 1
     }
-  } else { // Last 0.5 Red (quicker than % operator)
+  }
+  else
+  { // Last 0.5 Red (quicker than % operator)
     r = 255;
     g = b = 0;
   }
@@ -579,7 +640,8 @@ uint32_t Adafruit_DotStar::ColorHSV(uint16_t hue, uint8_t sat, uint8_t val) {
   @return  'Packed' 32-bit RGB value. Most significant byte is 0, second is
            is red, then green, and least significant byte is blue.
 */
-uint32_t Adafruit_DotStar::getPixelColor(uint16_t n) const {
+uint32_t Adafruit_DotStar::getPixelColor(uint16_t n) const
+{
   if (n >= numLEDs)
     return 0;
   uint8_t *p = &pixels[n * 3];
@@ -600,7 +662,8 @@ uint32_t Adafruit_DotStar::getPixelColor(uint16_t n) const {
            means that getPixelColor() returns the exact value originally
            stored.
 */
-void Adafruit_DotStar::setBrightness(uint8_t b) {
+void Adafruit_DotStar::setBrightness(uint8_t b)
+{
   // Stored brightness value is different than what's passed. This
   // optimizes the actual scaling math later, allowing a fast 8x8-bit
   // multiply and taking the MSB. 'brightness' is a uint8_t, adding 1
@@ -614,7 +677,8 @@ void Adafruit_DotStar::setBrightness(uint8_t b) {
   @brief   Retrieve the last-set brightness value for the strip.
   @return  Brightness value: 0 = minimum (off), 255 = maximum.
 */
-uint8_t Adafruit_DotStar::getBrightness(void) const {
+uint8_t Adafruit_DotStar::getBrightness(void) const
+{
   return brightness - 1; // Reverse above operation
 }
 
@@ -629,7 +693,8 @@ uint8_t Adafruit_DotStar::getBrightness(void) const {
            control you'll need to provide your own gamma-correction
            function instead.
 */
-uint32_t Adafruit_DotStar::gamma32(uint32_t x) {
+uint32_t Adafruit_DotStar::gamma32(uint32_t x)
+{
   uint8_t *y = (uint8_t *)&x;
   // All four bytes of a 32-bit value are filtered to avoid a bunch of
   // shifting and masking that would be necessary for properly handling
@@ -664,8 +729,10 @@ uint32_t Adafruit_DotStar::gamma32(uint32_t x) {
 */
 void Adafruit_DotStar::rainbow(uint16_t first_hue, int8_t reps,
                                uint8_t saturation, uint8_t brightness,
-                               bool gammify) {
-  for (uint16_t i = 0; i < numLEDs; i++) {
+                               bool gammify)
+{
+  for (uint16_t i = 0; i < numLEDs; i++)
+  {
     uint16_t hue = first_hue + (i * reps * 65536) / numLEDs;
     uint32_t color = ColorHSV(hue, saturation, brightness);
     if (gammify)

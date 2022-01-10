@@ -428,12 +428,12 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
-		},
-		{
 			"backtrace" : 5,
 			"id" : "__idf_wear_levelling::@cb21b0d7c0815cff11c6"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
 		}
 	],
 	"id" : "__idf_fatfs::@75ac1d9b25dacc8cc9e7",

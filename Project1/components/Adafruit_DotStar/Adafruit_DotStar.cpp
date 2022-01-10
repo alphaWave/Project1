@@ -100,9 +100,10 @@ Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t data, uint8_t clock,
 Adafruit_DotStar::~Adafruit_DotStar(void)
 {
   free(pixels);
-  if (dataPin == USE_HW_SPI)
-    hw_spi_end();
-  else
+  // NOTE DD: Commented out as long as HW-SPI not implemented
+  // if (dataPin == USE_HW_SPI)
+  //   hw_spi_end();
+  // else
     sw_spi_end();
 }
 
@@ -112,9 +113,10 @@ Adafruit_DotStar::~Adafruit_DotStar(void)
 */
 void Adafruit_DotStar::begin(void)
 {
-  if (dataPin == USE_HW_SPI)
-    hw_spi_init();
-  else
+  // NOTE DD: Commented out as long as HW-SPI not implemented
+  // if (dataPin == USE_HW_SPI)
+  //   hw_spi_init();
+  // else
     sw_spi_init();
 }
 
@@ -188,6 +190,7 @@ void Adafruit_DotStar::updateLength(uint16_t n)
   @note    This library is written in pre-SPI-transactions style and needs
            some rewriting to correctly share the SPI bus with other devices.
 */
+/*
 void Adafruit_DotStar::hw_spi_init(void)
 { // Initialize hardware SPI
 #ifdef __AVR_ATtiny85__
@@ -217,10 +220,12 @@ void Adafruit_DotStar::hw_spi_init(void)
   SPI.setDataMode(SPI_MODE0);
 #endif
 }
+*/
 
 /*!
   @brief   Stop hardware SPI.
 */
+/*
 void Adafruit_DotStar::hw_spi_end(void)
 {
 #ifdef __AVR_ATtiny85__
@@ -229,6 +234,7 @@ void Adafruit_DotStar::hw_spi_end(void)
   SPI.end();
 #endif
 }
+*/
 
 // END OF SPI
 
@@ -290,7 +296,7 @@ void Adafruit_DotStar::sw_spi_end()
 
 // CONTINUATION OF UN-IMPLEMENTED HARDWARE-SPI
 
-
+/*
 #ifdef __AVR_ATtiny85__
 
 // Teensy/Gemma-specific stuff for hardware-half-assisted SPI
@@ -320,6 +326,7 @@ static void spi_out(uint8_t n)
 #define spi_out(n) sw_spi_out(n)
 
 #endif
+*/
 
 // END OF SECOND PART OF HARDWARE-SPI
 
@@ -374,9 +381,56 @@ void Adafruit_DotStar::sw_spi_out(uint8_t n)
   are unlikely be merged for the foreseeable future.
 */
 
+// NOTE DD: RE-WROTE FUNCTION TO TAKE OUT HW-SPI FUNCTIONALITY. THE ORIGINAL 
+// FUNCTiON HAS BEEN COPIED AND COMMENTED OUT AT THE END FOR LATER, PROPER FIX. 
+
 /*!
   @brief   Transmit pixel data in RAM to DotStars.
 */
+void Adafruit_DotStar::show(void)
+{
+
+  if (!pixels)
+    return;
+
+  uint8_t *ptr = pixels, i;            // -> LED data
+  uint16_t n = numLEDs;                // Counter
+  uint16_t b16 = (uint16_t)brightness; // Type-convert for fixed-point math
+
+  if (dataPin == USE_HW_SPI)
+  {
+    // NOTE DD: if using SPI, do nothing.
+    return;
+  }
+  else
+  { // Soft (bitbang) SPI
+
+    for (i = 0; i < 4; i++)
+      sw_spi_out(0); // Start-frame marker
+    if (brightness)
+    { // Scale pixel brightness on output
+      do
+      {                   // For each pixel...
+        sw_spi_out(0xFF); //  Pixel start
+        for (i = 0; i < 3; i++)
+          sw_spi_out((*ptr++ * b16) >> 8); // Scale, write
+      } while (--n);
+    }
+    else
+    { // Full brightness (no scaling)
+      do
+      {                   // For each pixel...
+        sw_spi_out(0xFF); //  Pixel start
+        for (i = 0; i < 3; i++)
+          sw_spi_out(*ptr++); // R,G,B
+      } while (--n);
+    }
+    for (i = 0; i < ((numLEDs + 15) / 16); i++)
+      sw_spi_out(0xFF); // End-frame marker (see note above)
+  }
+}
+
+/*
 void Adafruit_DotStar::show(void)
 {
 
@@ -473,6 +527,7 @@ void Adafruit_DotStar::show(void)
       sw_spi_out(0xFF); // End-frame marker (see note above)
   }
 }
+*/
 
 /*!
   @brief   Fill the whole DotStar strip with 0 / black / off.

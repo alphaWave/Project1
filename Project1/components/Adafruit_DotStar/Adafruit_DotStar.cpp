@@ -49,7 +49,7 @@
 #include <stdio.h>
 #include <string.h>
 
-test
+test number two
 
 #define USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPI
 

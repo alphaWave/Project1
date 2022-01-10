@@ -49,7 +49,6 @@
 #include <stdio.h>
 #include <string.h>
 
-test number two
 
 #define USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPI
 
@@ -79,7 +78,7 @@ Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t o)
   @param   data   Arduino pin number for data out.
   @param   clock  Arduino pin number for clock out.
   @param   o      Pixel type -- one of the DOTSTAR_* constants defined in
-                  Adafruit_DotStar.h, for example DOTSTAR_BRG for DotStars
+define USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPI                  Adafruit_DotStar.h, for example DOTSTAR_BRG for DotStars
                   expecting color bytes expressed in blue, red, green order
                   per pixel. Default if unspecified is DOTSTAR_BRG.
   @return  Adafruit_DotStar object. Call the begin() function before use.
@@ -178,54 +177,60 @@ void Adafruit_DotStar::updateLength(uint16_t n)
   }
 }
 
-// SPI STUFF ---------------------------------------------------------------
 
-/*!
-  @brief   Initialize hardware SPI.
-  @note    This library is written in pre-SPI-transactions style and needs
-           some rewriting to correctly share the SPI bus with other devices.
-*/
-void Adafruit_DotStar::hw_spi_init(void)
-{ // Initialize hardware SPI
-#ifdef __AVR_ATtiny85__
-  PORTB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Outputs
-  DDRB |= _BV(PORTB1) | _BV(PORTB2);     // DO (NOT MOSI) + SCK
-#elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
-  SPI.begin();
-  // Hardware SPI clock speeds are chosen to run at roughly 1-8 MHz for most
-  // boards, providing a slower but more reliable experience by default.  If
-  // you want faster LED updates, experiment with the clock speeds to find
-  // what works best with your particular setup.
-#if defined(__AVR__) || defined(CORE_TEENSY) || defined(__ARDUINO_ARC__) || \
-    defined(__ARDUINO_X86__)
-  SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz (6 MHz on Pro Trinket 3V)
-#else
-#ifdef ESP8266
-  SPI.setFrequency(8000000L);
-#elif defined(PIC32)
-  // Use begin/end transaction to set SPI clock rate
-  SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
-  SPI.endTransaction();
-#else
-  SPI.setClockDivider((F_CPU + 4000000L) / 8000000L); // 8-ish MHz on Due
-#endif
-#endif
-  SPI.setBitOrder(MSBFIRST);
-  SPI.setDataMode(SPI_MODE0);
-#endif
-}
+// NOTE: PROPER SPI HAS NOT YET BEEN IMPLEMENTED WITHOUT ARDUINO-FRAMEWORK. 
 
-/*!
-  @brief   Stop hardware SPI.
-*/
-void Adafruit_DotStar::hw_spi_end(void)
-{
-#ifdef __AVR_ATtiny85__
-  DDRB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Inputs
-#elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
-  SPI.end();
-#endif
-}
+// // SPI STUFF ---------------------------------------------------------------
+
+// /*!
+//   @brief   Initialize hardware SPI.
+//   @note    This library is written in pre-SPI-transactions style and needs
+//            some rewriting to correctly share the SPI bus with other devices.
+// */
+// void Adafruit_DotStar::hw_spi_init(void)
+// { // Initialize hardware SPI
+// #ifdef __AVR_ATtiny85__
+//   PORTB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Outputs
+//   DDRB |= _BV(PORTB1) | _BV(PORTB2);     // DO (NOT MOSI) + SCK
+// #elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
+//   SPI.begin();
+//   // Hardware SPI clock speeds are chosen to run at roughly 1-8 MHz for most
+//   // boards, providing a slower but more reliable experience by default.  If
+//   // you want faster LED updates, experiment with the clock speeds to find
+//   // what works best with your particular setup.
+// #if defined(__AVR__) || defined(CORE_TEENSY) || defined(__ARDUINO_ARC__) || \
+//     defined(__ARDUINO_X86__)
+//   SPI.setClockDivider(SPI_CLOCK_DIV2); // 8 MHz (6 MHz on Pro Trinket 3V)
+// #else
+// #ifdef ESP8266
+//   SPI.setFrequency(8000000L);
+// #elif defined(PIC32)
+//   // Use begin/end transaction to set SPI clock rate
+//   SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
+//   SPI.endTransaction();
+// #else
+//   SPI.setClockDivider((F_CPU + 4000000L) / 8000000L); // 8-ish MHz on Due
+// #endif
+// #endif
+//   SPI.setBitOrder(MSBFIRST);
+//   SPI.setDataMode(SPI_MODE0);
+// #endif
+// }
+
+// /*!
+//   @brief   Stop hardware SPI.
+// */
+// void Adafruit_DotStar::hw_spi_end(void)
+// {
+// #ifdef __AVR_ATtiny85__
+//   DDRB &= ~(_BV(PORTB1) | _BV(PORTB2)); // Inputs
+// #elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
+//   SPI.end();
+// #endif
+// }
+
+// END OF SPI
+
 
 /*!
   @brief   Initialize 'soft' (bitbang) SPI. Data and clock pins are set
@@ -259,33 +264,39 @@ void Adafruit_DotStar::sw_spi_end()
 
 #ifdef __AVR_ATtiny85__
 
-// Teensy/Gemma-specific stuff for hardware-half-assisted SPI
 
-#define SPIBIT                            \
-  USICR = ((1 << USIWM0) | (1 << USITC)); \
-  USICR =                                 \
-      ((1 << USIWM0) | (1 << USITC) | (1 << USICLK)); // Clock bit tick, tock
+// CONTINUATION OF UN-IMPLEMENTED HARDWARE-SPI
 
-static void spi_out(uint8_t n)
-{ // Clock out one byte
-  USIDR = n;
-  SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT
-}
+// // Teensy/Gemma-specific stuff for hardware-half-assisted SPI
 
-#elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
+// #define SPIBIT                            \
+//   USICR = ((1 << USIWM0) | (1 << USITC)); \
+//   USICR =                                 \
+//       ((1 << USIWM0) | (1 << USITC) | (1 << USICLK)); // Clock bit tick, tock
 
-// All other boards have full-featured hardware support for SPI
+// static void spi_out(uint8_t n)
+// { // Clock out one byte
+//   USIDR = n;
+//   SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT SPIBIT
+// }
 
-#define spi_out(n) (void)SPI.transfer(n) ///< Call hardware SPI function
-// Pipelining reads next byte while current byte is clocked out
-#if (defined(__AVR__) && !defined(__AVR_ATtiny85__)) || defined(CORE_TEENSY)
-#define SPI_PIPELINE
-#endif
+// #elif (SPI_INTERFACES_COUNT > 0) || !defined(SPI_INTERFACES_COUNT)
 
-#else // no hardware spi
-#define spi_out(n) sw_spi_out(n)
+// // All other boards have full-featured hardware support for SPI
 
-#endif
+// #define spi_out(n) (void)SPI.transfer(n) ///< Call hardware SPI function
+// // Pipelining reads next byte while current byte is clocked out
+// #if (defined(__AVR__) && !defined(__AVR_ATtiny85__)) || defined(CORE_TEENSY)
+// #define SPI_PIPELINE
+// #endif
+
+// #else // no hardware spi
+// #define spi_out(n) sw_spi_out(n)
+
+// #endif
+
+// END OF SECOND PART OF HARDWARE-SPI
+
 
 /*!
   @brief   Soft (bitbang) SPI write.

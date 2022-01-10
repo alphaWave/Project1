@@ -639,14 +639,6 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_asio::@db1a8833e22596808d70"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "__idf_cbor::@54bec30243cbf65f6214"
 		},
@@ -741,6 +733,14 @@
 		{
 			"backtrace" : 0,
 			"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "__idf_esp_pm::@c93acdd4f72df5fa58db"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_asio::@db1a8833e22596808d70"
 		}
 	],
 	"id" : "__idf_main::@7368607ed66887415643",

@@ -1004,3 +1004,14 @@
 67	2048	1641757051845104066	bootloader/bootloader.elf	d66d7d8bda725da2
 67	2048	1641757051845104066	bootloader/bootloader.bin	d66d7d8bda725da2
 67	2048	1641757051845104066	bootloader/bootloader.map	d66d7d8bda725da2
+3	5077	1641839649861121103	build.ninja	216fdc774230803d
+42	75	1641757051845104066	bootloader-prefix/src/bootloader-stamp/bootloader-build	d66d7d8bda725da2
+42	75	1641757051845104066	bootloader/bootloader.elf	d66d7d8bda725da2
+42	75	1641757051845104066	bootloader/bootloader.bin	d66d7d8bda725da2
+42	75	1641757051845104066	bootloader/bootloader.map	d66d7d8bda725da2
+43	304	1641839650799450762	esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj	916ad35d6f0fc1be
+305	359	1641839650854520000	esp-idf/app_update/libapp_update.a	7931e8a27aa0294
+36	61	1641757051845104066	bootloader-prefix/src/bootloader-stamp/bootloader-build	d66d7d8bda725da2
+36	61	1641757051845104066	bootloader/bootloader.elf	d66d7d8bda725da2
+36	61	1641757051845104066	bootloader/bootloader.bin	d66d7d8bda725da2
+36	61	1641757051845104066	bootloader/bootloader.map	d66d7d8bda725da2

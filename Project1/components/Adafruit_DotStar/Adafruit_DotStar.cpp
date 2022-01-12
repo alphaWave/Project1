@@ -79,8 +79,8 @@ Adafruit_DotStar::Adafruit_DotStar(uint16_t n, uint8_t o)
   @param   data   Arduino pin number for data out.
   @param   clock  Arduino pin number for clock out.
   @param   o      Pixel type -- one of the DOTSTAR_* constants defined in
-define USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPIdefine USE_HW_SPI 255 ///< Assigned to dataPin to indicate 'hard' SPI                  Adafruit_DotStar.h, for example DOTSTAR_BRG for DotStars
-                  expecting color bytes expressed in blue, red, green order
+                  Adafruit_DotStar.h, for example DOTSTAR_BRG for DotStars
+                  expecting color bytes expressed in blue, red, greAen order
                   per pixel. Default if unspecified is DOTSTAR_BRG.
   @return  Adafruit_DotStar object. Call the begin() function before use.
 */

@@ -657,6 +657,7 @@
     "SECURE_BOOT": false,
     "SECURE_FLASH_ENC_ENABLED": false,
     "SECURE_SIGNED_APPS_NO_SECURE_BOOT": false,
+    "SPIBUS_LOG_READWRITES": false,
     "SPIFFS_API_DBG": false,
     "SPIFFS_CACHE": true,
     "SPIFFS_CACHE_DBG": false,

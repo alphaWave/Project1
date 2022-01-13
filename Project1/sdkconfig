@@ -1198,6 +1198,12 @@ CONFIG_WPA_MBEDTLS_CRYPTO=y
 # CONFIG_WPA_WPS_STRICT is not set
 # CONFIG_WPA_11KV_SUPPORT is not set
 # end of Supplicant
+
+#
+# SPIbus
+#
+# CONFIG_SPIBUS_LOG_READWRITES is not set
+# end of SPIbus
 # end of Component config
 
 #

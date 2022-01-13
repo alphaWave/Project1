@@ -6,7 +6,12 @@
 	],
 	"settings": {
 		"files.associations": {
-			"random": "cpp"
+			"random": "cpp",
+			"array": "c",
+			"iterator": "c",
+			"string": "c",
+			"string_view": "c",
+			"vector": "c"
 		}
 	}
 }

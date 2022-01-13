@@ -19094,6 +19094,65 @@
                 "id": "component-config-supplicant",
                 "title": "Supplicant",
                 "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice>",
+                                        "help": null,
+                                        "id": "SPIBUS_LOG_RW_LEVEL_INFO",
+                                        "name": "SPIBUS_LOG_RW_LEVEL_INFO",
+                                        "range": null,
+                                        "title": "Info",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice>",
+                                        "help": null,
+                                        "id": "SPIBUS_LOG_RW_LEVEL_DEBUG",
+                                        "name": "SPIBUS_LOG_RW_LEVEL_DEBUG",
+                                        "range": null,
+                                        "title": "Debug",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice>",
+                                        "help": null,
+                                        "id": "SPIBUS_LOG_RW_LEVEL_VERBOSE",
+                                        "name": "SPIBUS_LOG_RW_LEVEL_VERBOSE",
+                                        "range": null,
+                                        "title": "Verbose",
+                                        "type": "bool"
+                                    }
+                                ],
+                                "depends_on": "SPIBUS_LOG_READWRITES",
+                                "help": "Log level for successuful read/write operations. Levels depends on LOG_DEFAULT_LEVEL.",
+                                "id": "component-config-spibus-log-successuful-read-write-operations-debug--log-level",
+                                "name": null,
+                                "title": "Log level",
+                                "type": "choice"
+                            }
+                        ],
+                        "depends_on": "!LOG_DEFAULT_LEVEL_NONE && !LOG_DEFAULT_LEVEL_ERROR && !LOG_DEFAULT_LEVEL_WARN",
+                        "help": "Log all successuful read/write data, including port, slave address, \ntarget register and the data written to. Useful for debugging.",
+                        "id": "SPIBUS_LOG_READWRITES",
+                        "name": "SPIBUS_LOG_READWRITES",
+                        "range": null,
+                        "title": "Log successuful read/write operations (debug)",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "id": "component-config-spibus",
+                "title": "SPIbus",
+                "type": "menu"
             }
         ],
         "depends_on": null,

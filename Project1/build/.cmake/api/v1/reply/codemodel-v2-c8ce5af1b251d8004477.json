@@ -1732,7 +1732,7 @@
 				{
 					"directoryIndex" : 14,
 					"id" : "__idf_app_update::@cc3b426666063acc9674",
-					"jsonFile" : "target-__idf_app_update-Debug-c355c091c59431fe6f42.json",
+					"jsonFile" : "target-__idf_app_update-Debug-6c58d0f365f4bd679c1d.json",
 					"name" : "__idf_app_update",
 					"projectIndex" : 1
 				},
@@ -2061,7 +2061,7 @@
 				{
 					"directoryIndex" : 92,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-Debug-e3a63cd4e18f221a6f69.json",
+					"jsonFile" : "target-__idf_main-Debug-7dc9198ebea2c58aab83.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},
@@ -2187,7 +2187,7 @@
 				{
 					"directoryIndex" : 90,
 					"id" : "__idf_ulp::@59f74c71af7e30dd3e55",
-					"jsonFile" : "target-__idf_ulp-Debug-b44072e934de57a13d52.json",
+					"jsonFile" : "target-__idf_ulp-Debug-90783875b4a7ec0d7a96.json",
 					"name" : "__idf_ulp",
 					"projectIndex" : 1
 				},
@@ -2215,7 +2215,7 @@
 				{
 					"directoryIndex" : 91,
 					"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098",
-					"jsonFile" : "target-__idf_wifi_provisioning-Debug-8fa3a87f9eb815b7881c.json",
+					"jsonFile" : "target-__idf_wifi_provisioning-Debug-f4bc61afd84db3b4c2d2.json",
 					"name" : "__idf_wifi_provisioning",
 					"projectIndex" : 1
 				},
@@ -2236,7 +2236,7 @@
 				{
 					"directoryIndex" : 22,
 					"id" : "__ldgen_output_sections.ld::@874df54e61e20112dfd4",
-					"jsonFile" : "target-__ldgen_output_sections.ld-Debug-d51b76bf484901945c98.json",
+					"jsonFile" : "target-__ldgen_output_sections.ld-Debug-260f759fe4d075f97e1d.json",
 					"name" : "__ldgen_output_sections.ld",
 					"projectIndex" : 1
 				},
@@ -2278,7 +2278,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "blink.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-blink.elf-Debug-75d93efdced3a82dc780.json",
+					"jsonFile" : "target-blink.elf-Debug-4c1f63a938d5b7737865.json",
 					"name" : "blink.elf",
 					"projectIndex" : 0
 				},
@@ -2383,7 +2383,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "flash::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-flash-Debug-75d3051cc71ad63955b1.json",
+					"jsonFile" : "target-flash-Debug-6801b746cef13e2b4d3a.json",
 					"name" : "flash",
 					"projectIndex" : 0
 				},
@@ -2516,7 +2516,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "uf2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-uf2-Debug-4c394927bfc5751259c6.json",
+					"jsonFile" : "target-uf2-Debug-7c5441e6a1669f14b7d4.json",
 					"name" : "uf2",
 					"projectIndex" : 0
 				},

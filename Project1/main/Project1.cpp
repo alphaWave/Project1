@@ -4,7 +4,6 @@
 
 #include <stdio.h>
 
-
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
@@ -34,11 +33,9 @@ Adafruit_DotStar myStrip(NUMPIXELS, DATAPIN, CLOCKPIN, DOTSTAR_BRG);
 
 extern "C" void app_main(void)
 {
-	// initArduino();
-
 	// IF I UNCOMMENT THIS, THE PROBLEMS START HAPPENING
 	// bool isColored = true;
-    // ledRunning(isColored);
+	// ledRunning(isColored);
 
 	myStrip.begin(); // Initialize pins for output
 	myStrip.show();	 // Turn all LEDs off ASAP

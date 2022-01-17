@@ -1728,14 +1728,14 @@
 				{
 					"directoryIndex" : 95,
 					"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee",
-					"jsonFile" : "target-__idf_Adafruit_DotStar-Debug-c8a911580529c7c0c6a2.json",
+					"jsonFile" : "target-__idf_Adafruit_DotStar-Debug-b1186549cda8c4203b74.json",
 					"name" : "__idf_Adafruit_DotStar",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 96,
 					"id" : "__idf_LEDfunctions::@cdedd027a94f49b841a0",
-					"jsonFile" : "target-__idf_LEDfunctions-Debug-33ee334275469b2f8b9e.json",
+					"jsonFile" : "target-__idf_LEDfunctions-Debug-24a62148467449c732d7.json",
 					"name" : "__idf_LEDfunctions",
 					"projectIndex" : 1
 				},
@@ -1756,7 +1756,7 @@
 				{
 					"directoryIndex" : 14,
 					"id" : "__idf_app_update::@cc3b426666063acc9674",
-					"jsonFile" : "target-__idf_app_update-Debug-e751781157a2cf8f948e.json",
+					"jsonFile" : "target-__idf_app_update-Debug-774770578ef8b319be96.json",
 					"name" : "__idf_app_update",
 					"projectIndex" : 1
 				},
@@ -2008,7 +2008,7 @@
 				{
 					"directoryIndex" : 78,
 					"id" : "__idf_fatfs::@75ac1d9b25dacc8cc9e7",
-					"jsonFile" : "target-__idf_fatfs-Debug-0c09b1ff8da84b880d5f.json",
+					"jsonFile" : "target-__idf_fatfs-Debug-0a98a619540be04a3473.json",
 					"name" : "__idf_fatfs",
 					"projectIndex" : 1
 				},
@@ -2085,7 +2085,7 @@
 				{
 					"directoryIndex" : 92,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-Debug-7decf4313f93cfab070b.json",
+					"jsonFile" : "target-__idf_main-Debug-8d07d78348105d8911bf.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},
@@ -2239,7 +2239,7 @@
 				{
 					"directoryIndex" : 91,
 					"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098",
-					"jsonFile" : "target-__idf_wifi_provisioning-Debug-f4bc61afd84db3b4c2d2.json",
+					"jsonFile" : "target-__idf_wifi_provisioning-Debug-2501eb7a88fafff3b387.json",
 					"name" : "__idf_wifi_provisioning",
 					"projectIndex" : 1
 				},
@@ -2260,7 +2260,7 @@
 				{
 					"directoryIndex" : 22,
 					"id" : "__ldgen_output_sections.ld::@874df54e61e20112dfd4",
-					"jsonFile" : "target-__ldgen_output_sections.ld-Debug-b003f9471e5a92393af2.json",
+					"jsonFile" : "target-__ldgen_output_sections.ld-Debug-6a8d56937c33dcc0a3cb.json",
 					"name" : "__ldgen_output_sections.ld",
 					"projectIndex" : 1
 				},
@@ -2281,7 +2281,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "app::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-app-Debug-f3fd322da9527d57c550.json",
+					"jsonFile" : "target-app-Debug-20fa2dded5a69097f419.json",
 					"name" : "app",
 					"projectIndex" : 0
 				},
@@ -2295,14 +2295,14 @@
 				{
 					"directoryIndex" : 12,
 					"id" : "app_check_size::@bf8f55be585a12323665",
-					"jsonFile" : "target-app_check_size-Debug-3ec8c62180b47ad74385.json",
+					"jsonFile" : "target-app_check_size-Debug-73fe96e136a90353d63f.json",
 					"name" : "app_check_size",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "blink.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-blink.elf-Debug-cfb11f2b99bdb57465ec.json",
+					"jsonFile" : "target-blink.elf-Debug-45adecc939b22880b1a0.json",
 					"name" : "blink.elf",
 					"projectIndex" : 0
 				},
@@ -2407,7 +2407,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "flash::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-flash-Debug-6801b746cef13e2b4d3a.json",
+					"jsonFile" : "target-flash-Debug-e63f0045aaefca10ebe6.json",
 					"name" : "flash",
 					"projectIndex" : 0
 				},

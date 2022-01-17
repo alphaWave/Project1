@@ -34,7 +34,6 @@ void ledRunning(bool isColored, int delayTimeInMs)
     {
         color = 0xFF0000; // 'On' color (starts red)
     }
-    
     const TickType_t delay = delayTimeInMs / portTICK_PERIOD_MS;
 
     while (1)

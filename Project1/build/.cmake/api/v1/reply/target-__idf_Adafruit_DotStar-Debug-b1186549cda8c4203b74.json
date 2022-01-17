@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "esp-idf/LEDfunctions/libLEDfunctions.a"
+			"path" : "esp-idf/Adafruit_DotStar/libAdafruit_DotStar.a"
 		}
 	],
 	"backtrace" : 2,
@@ -25,7 +25,7 @@
 		"files" : 
 		[
 			"/Users/dolpdiego/esp/esp-idf/tools/cmake/component.cmake",
-			"components/LEDfunctions/CMakeLists.txt",
+			"components/Adafruit_DotStar/CMakeLists.txt",
 			"/Users/dolpdiego/esp/esp-idf/tools/cmake/utilities.cmake"
 		],
 		"nodes" : 
@@ -228,7 +228,7 @@
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/LEDfunctions/include"
+					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/Adafruit_DotStar/include"
 				},
 				{
 					"backtrace" : 2,
@@ -428,10 +428,6 @@
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/Adafruit_DotStar/include"
-				},
-				{
-					"backtrace" : 5,
 					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/SPIbus/include"
 				}
 			],
@@ -445,25 +441,21 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "__idf_esp_ringbuf::@ad62994b1ce98b81017d"
-		},
-		{
 			"backtrace" : 5,
 			"id" : "__idf_SPIbus::@f893da5841b7780257f9"
 		},
 		{
-			"backtrace" : 5,
-			"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee"
+			"backtrace" : 2,
+			"id" : "__idf_esp_ringbuf::@ad62994b1ce98b81017d"
 		}
 	],
-	"id" : "__idf_LEDfunctions::@cdedd027a94f49b841a0",
-	"name" : "__idf_LEDfunctions",
-	"nameOnDisk" : "libLEDfunctions.a",
+	"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee",
+	"name" : "__idf_Adafruit_DotStar",
+	"nameOnDisk" : "libAdafruit_DotStar.a",
 	"paths" : 
 	{
-		"build" : "esp-idf/LEDfunctions",
-		"source" : "components/LEDfunctions"
+		"build" : "esp-idf/Adafruit_DotStar",
+		"source" : "components/Adafruit_DotStar"
 	},
 	"sourceGroups" : 
 	[
@@ -480,7 +472,7 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "components/LEDfunctions/LEDfunctions.cpp",
+			"path" : "components/Adafruit_DotStar/Adafruit_DotStar.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

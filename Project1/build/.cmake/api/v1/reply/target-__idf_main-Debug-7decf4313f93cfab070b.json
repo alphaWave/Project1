@@ -694,15 +694,15 @@
 				},
 				{
 					"backtrace" : 0,
+					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/SPIbus/include"
+				},
+				{
+					"backtrace" : 0,
 					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/Adafruit_DotStar/include"
 				},
 				{
 					"backtrace" : 0,
 					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/LEDfunctions/include"
-				},
-				{
-					"backtrace" : 0,
-					"path" : "/Users/dolpdiego/CodingProjects/-Project1/Project1/components/SPIbus/include"
 				}
 			],
 			"language" : "CXX",
@@ -714,46 +714,6 @@
 	],
 	"dependencies" : 
 	[
-		{
-			"backtrace" : 0,
-			"id" : "__idf_SPIbus::@f893da5841b7780257f9"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_libsodium::@66e4f5d448f23c9449a2"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_mqtt::@c1ab2c6a99226d1f4b56"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_openssl::@e614527ea5fe5ca5f395"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_perfmon::@aac0f647c32bb8f54a67"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_spiffs::@df881b71474064c86689"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_led_strip::@aa443316a99fb884b8ed"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee"
-		},
-		{
-			"backtrace" : 0,
-			"id" : "__idf_LEDfunctions::@cdedd027a94f49b841a0"
-		},
 		{
 			"backtrace" : 2,
 			"id" : "__idf_esp_ringbuf::@ad62994b1ce98b81017d"
@@ -833,6 +793,46 @@
 		{
 			"backtrace" : 0,
 			"id" : "__idf_json::@c78a8bdc820334f01148"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_libsodium::@66e4f5d448f23c9449a2"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_mqtt::@c1ab2c6a99226d1f4b56"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_openssl::@e614527ea5fe5ca5f395"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_perfmon::@aac0f647c32bb8f54a67"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_spiffs::@df881b71474064c86689"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_wifi_provisioning::@9d7e7ffe1b15746c1098"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_led_strip::@aa443316a99fb884b8ed"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_SPIbus::@f893da5841b7780257f9"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "__idf_LEDfunctions::@cdedd027a94f49b841a0"
 		}
 	],
 	"id" : "__idf_main::@7368607ed66887415643",

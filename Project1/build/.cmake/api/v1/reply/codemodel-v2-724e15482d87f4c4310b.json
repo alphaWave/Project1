@@ -1425,6 +1425,20 @@
 					]
 				},
 				{
+					"build" : "esp-idf/SPIbus",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "components/SPIbus",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
 					"build" : "esp-idf/Adafruit_DotStar",
 					"minimumCMakeVersion" : 
 					{
@@ -1450,20 +1464,6 @@
 					"targetIndexes" : 
 					[
 						1
-					]
-				},
-				{
-					"build" : "esp-idf/SPIbus",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.5"
-					},
-					"parentIndex" : 1,
-					"projectIndex" : 1,
-					"source" : "components/SPIbus",
-					"targetIndexes" : 
-					[
-						2
 					]
 				}
 			],
@@ -1726,21 +1726,21 @@
 			"targets" : 
 			[
 				{
-					"directoryIndex" : 94,
+					"directoryIndex" : 95,
 					"id" : "__idf_Adafruit_DotStar::@607a71aff3a1f1d606ee",
-					"jsonFile" : "target-__idf_Adafruit_DotStar-Debug-9f55dbdd10bf735a8ad6.json",
+					"jsonFile" : "target-__idf_Adafruit_DotStar-Debug-c8a911580529c7c0c6a2.json",
 					"name" : "__idf_Adafruit_DotStar",
 					"projectIndex" : 1
 				},
 				{
-					"directoryIndex" : 95,
+					"directoryIndex" : 96,
 					"id" : "__idf_LEDfunctions::@cdedd027a94f49b841a0",
-					"jsonFile" : "target-__idf_LEDfunctions-Debug-22cddce3d89e86e4d496.json",
+					"jsonFile" : "target-__idf_LEDfunctions-Debug-33ee334275469b2f8b9e.json",
 					"name" : "__idf_LEDfunctions",
 					"projectIndex" : 1
 				},
 				{
-					"directoryIndex" : 96,
+					"directoryIndex" : 94,
 					"id" : "__idf_SPIbus::@f893da5841b7780257f9",
 					"jsonFile" : "target-__idf_SPIbus-Debug-24de834824ad1dbfd3e9.json",
 					"name" : "__idf_SPIbus",
@@ -1756,7 +1756,7 @@
 				{
 					"directoryIndex" : 14,
 					"id" : "__idf_app_update::@cc3b426666063acc9674",
-					"jsonFile" : "target-__idf_app_update-Debug-58c82389594ee37b33cd.json",
+					"jsonFile" : "target-__idf_app_update-Debug-e751781157a2cf8f948e.json",
 					"name" : "__idf_app_update",
 					"projectIndex" : 1
 				},
@@ -2085,7 +2085,7 @@
 				{
 					"directoryIndex" : 92,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-Debug-289c825168fd31507f93.json",
+					"jsonFile" : "target-__idf_main-Debug-7decf4313f93cfab070b.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},
@@ -2260,7 +2260,7 @@
 				{
 					"directoryIndex" : 22,
 					"id" : "__ldgen_output_sections.ld::@874df54e61e20112dfd4",
-					"jsonFile" : "target-__ldgen_output_sections.ld-Debug-4a7c6106f8310b48dbef.json",
+					"jsonFile" : "target-__ldgen_output_sections.ld-Debug-b003f9471e5a92393af2.json",
 					"name" : "__ldgen_output_sections.ld",
 					"projectIndex" : 1
 				},
@@ -2302,7 +2302,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "blink.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-blink.elf-Debug-635352aa1b6d8676c836.json",
+					"jsonFile" : "target-blink.elf-Debug-cfb11f2b99bdb57465ec.json",
 					"name" : "blink.elf",
 					"projectIndex" : 0
 				},

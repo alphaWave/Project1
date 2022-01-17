@@ -677,6 +677,13 @@
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/led_strip/CMakeFiles/install.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/led_strip/CMakeFiles/list_install_components.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/led_strip/CMakeFiles/__idf_led_strip.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/install/local.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/rebuild_cache.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/edit_cache.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/install/strip.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/install.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/list_install_components.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/__idf_SPIbus.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/install/local.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/install/strip.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/install.dir
@@ -691,10 +698,3 @@
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/list_install_components.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/rebuild_cache.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/edit_cache.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/install/local.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/rebuild_cache.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/edit_cache.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/install/strip.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/install.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/list_install_components.dir
-/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/__idf_SPIbus.dir

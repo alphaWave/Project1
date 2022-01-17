@@ -119,6 +119,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/main/cmake_install.cmake")
   include("/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/led_strip/cmake_install.cmake")
   include("/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/cmake_install.cmake")
+  include("/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/cmake_install.cmake")
   include("/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/cmake_install.cmake")
 
 endif()

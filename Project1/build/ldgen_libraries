@@ -72,4 +72,5 @@
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/main/libmain.a
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/led_strip/libled_strip.a
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/libAdafruit_DotStar.a
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/libLEDfunctions.a
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/libSPIbus.a

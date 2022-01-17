@@ -9,16 +9,16 @@
 #include "driver/gpio.h"
 #include "sdkconfig.h"
 #include "../components/Adafruit_DotStar/include/Adafruit_DotStar.h"
-// #include "../components/LEDStrip/include/LEDStrip.h"
+#include "../components/LEDfunctions/include/LEDfunctions.h"
 
-// DATAPIN and CLOCKPIN can usually be any two pins
-enum
-{
-	NUMPIXELS = 60,
-	DATAPIN = 4,
-	CLOCKPIN = 5,
-	MAX_BRIGHTNESS = 255
-};
+// // DATAPIN and CLOCKPIN can usually be any two pins
+// enum
+// {
+// 	NUMPIXELS = 60,
+// 	DATAPIN = 4,
+// 	CLOCKPIN = 5,
+// 	MAX_BRIGHTNESS = 255
+// };
 
 // This is how we declare a DotStar-object
 Adafruit_DotStar myStrip(NUMPIXELS, DATAPIN, CLOCKPIN, DOTSTAR_BRG);

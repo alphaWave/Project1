@@ -72,4 +72,5 @@ $<TARGET_FILE:__idf_wifi_provisioning>
 $<TARGET_FILE:__idf_main>
 $<TARGET_FILE:__idf_led_strip>
 $<TARGET_FILE:__idf_Adafruit_DotStar>
+$<TARGET_FILE:__idf_LEDfunctions>
 $<TARGET_FILE:__idf_SPIbus>

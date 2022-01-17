@@ -684,6 +684,13 @@
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/rebuild_cache.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/edit_cache.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/Adafruit_DotStar/CMakeFiles/__idf_Adafruit_DotStar.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/install/local.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/install/strip.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/__idf_LEDfunctions.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/install.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/list_install_components.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/rebuild_cache.dir
+/Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/LEDfunctions/CMakeFiles/edit_cache.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/install/local.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/rebuild_cache.dir
 /Users/dolpdiego/CodingProjects/-Project1/Project1/build/esp-idf/SPIbus/CMakeFiles/edit_cache.dir
